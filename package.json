@@ -1,0 +1,60 @@
+{
+  "name": "gulp-eta",
+  "version": "0.1.0",
+  "description": "A starter set of Gulp tasks to do badass development.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/40Digits/gulp-eta.git"
+  },
+  "keywords": [
+    "gulp",
+    "browserify",
+    "sass",
+    "images",
+    "sprites",
+    "symbols",
+    "40digits"
+  ],
+  "author": "Chad Watson <chad@40digits.com> (http://chadwatson.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/40Digits/gulp-eta/issues"
+  },
+  "homepage": "https://github.com/40Digits/gulp-eta#readme",
+  "dependencies": {
+    "browser-sync": "^2.7.3",
+    "browserify": "^10.0.0",
+    "css-sprite": "^0.9.8",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-changed": "^1.2.1",
+    "gulp-combine-mq": "^0.4.0",
+    "gulp-consolidate": "^0.1.2",
+    "gulp-css-globbing": "^0.1.8",
+    "gulp-file": "^0.2.0",
+    "gulp-file-include": "^0.9.0",
+    "gulp-filesize": "0.0.6",
+    "gulp-filter": "^2.0.2",
+    "gulp-iconfont": "^1.0.0",
+    "gulp-if": "1.2.5",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-livereload": "^3.8.0",
+    "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-minify-css": "^1.1.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.3",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.4",
+    "lodash": "^3.9.3",
+    "ncp": "^2.0.0",
+    "pretty-hrtime": "^1.0.0",
+    "require-directory": "^2.1.1",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
