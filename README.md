@@ -113,7 +113,7 @@ config.scaffold = {
     images:   'images',
     sprites:  'images/sprites',
     scripts:  'js',
-    styles:   'css',
+    styles:   '/',
     symbols:  'fonts/symbols',
     static:   '/'
   }
@@ -133,10 +133,10 @@ The folder stucture looks like this:
 │   ├───images
 │   │   └───sprites
 │   ├───js
-│   ├───css
 │   └───fonts
 │       └───symbols
 ├───gulpfile.js
+├───style.css // styles go to app root by default
 ├───index.html // created from the static task
 └───node_modules
 ```
@@ -155,10 +155,10 @@ If you want to rename your source folder:
 options.scaffold.source.root = 'source';
 ```
 
-If you want your CSS files in the root of your app:
+If you want your CSS files in the assets folder:
 
 ```javascript
-options.scaffold.assets.styles = '/';
+options.scaffold.assets.styles = 'css';
 ```
 
 ***
@@ -255,11 +255,22 @@ Compiles sprite assets into a sprite sheet, and generates a sass file for mixins
 options.sprites = {
   settings: {
     retina: true,
+    dimension: [
+      {
+        ratio: 1, dpi: 72
+      }, {
+        ratio: 2, dpi: 192
+      }
+    ],
+    margin: 0,
+    split: true, // to create multiple sprites by putting images in subdirectories
+    name: 'sprite', // for split. ex: sprite-main.png, sprite-blog.png
     style: '_sprites.scss',
-    cssPath: assets.sprites,
-    processor: 'scss',
+    cssPath: p.join(config.scaffold.assets.root, config.scaffold.assets.styles),
+    template: p.join(config.scaffold.source.root, config.scaffold.source.sprites, '/template/scss.hbs'),
+    processor: 'sass',
     orientation: 'binary-tree',
-    prefix: 'sprite'
+    prefix: 'sprite' // for sass
   }
 }
 ```
@@ -292,9 +303,10 @@ Creates static HTML files from HTML partials
 ```javascript
 options.static = {
   extension: ".html",
+  // see https://www.npmjs.com/package/gulp-file-include for available settings
   settings: {
     prefix: '@@',
-    basepath: '/'
+    basepath: '@file'
   }
 }
 ```
@@ -312,7 +324,8 @@ config.watch = {
   styles:   'sass',
   symbols:  'symbols',
   images:   'images',
-  sprites:  'sprites'
+  sprites:  'sprites',
+  static:   'static'
 };
 ```
 
