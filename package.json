@@ -28,7 +28,6 @@
   "dependencies": {
     "browser-sync": "^2.7.3",
     "browserify": "^10.0.0",
-    "css-sprite": "^0.9.8",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-changed": "^1.2.1",
@@ -57,6 +56,8 @@
     "ncp": "^2.0.0",
     "pretty-hrtime": "^1.0.0",
     "require-directory": "^2.1.1",
+    "sprity": "^1.0.6",
+    "sprity-sass": "^1.0.4",
     "vinyl-source-stream": "^1.1.0"
   }
 }
