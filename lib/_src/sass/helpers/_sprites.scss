@@ -33,12 +33,12 @@ $sun: -2px -2px 100px 100px;
 }
 
 .sprite {
-  background-image: url('/Users/chadwatson/Projects/eta-example/assets/images/sprites/sprite.png');
+  background-image: url('/Dev-Projects/Eta/assets/images/sprite.png');
 }
 
 @media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
   .sprite {
-    background-image: url('/Users/chadwatson/Projects/eta-example/assets/images/sprites/sprite@2x.png');
+    background-image: url('/Dev-Projects/Eta/assets/images/sprite@2x.png');
     background-size: 198px 104px;
   }
 }

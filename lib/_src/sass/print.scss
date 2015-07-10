@@ -36,22 +36,22 @@ $print-media: true;
 // Layout
 //---------------------------------
 
-@import "layout/*";
+@import "layout/all";
 
 //---------------------------------
 // Vendor
 //---------------------------------
 
-@import "vendor/*";
+@import "vendor/all";
 
 //---------------------------------
 // Modules
 //---------------------------------
 
-@import "modules/*";
+@import "modules/all";
 
 //---------------------------------
 // Application
 //---------------------------------
 
-@import "app/*";
+@import "app/all";
