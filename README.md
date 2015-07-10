@@ -218,7 +218,18 @@ options.sass = {
   globbing: {
     extensions: ['.scss', '.sass']
   }
-}
+};
+
+options.autoprefixer = {
+  browsers: [
+    'last 2 versions',
+    'safari 5',
+    'ie 8',
+    'ie 9',
+    'android 4'
+  ],
+  cascade: true
+};
 ```
 
 ### `images`
