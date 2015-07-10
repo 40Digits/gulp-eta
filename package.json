@@ -34,6 +34,7 @@
     "gulp-combine-mq": "^0.4.0",
     "gulp-consolidate": "^0.1.2",
     "gulp-css-globbing": "^0.1.8",
+    "gulp-debug": "^2.0.1",
     "gulp-file": "^0.2.0",
     "gulp-file-include": "^0.9.0",
     "gulp-filesize": "0.0.6",
