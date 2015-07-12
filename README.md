@@ -30,7 +30,7 @@ Eta is made to work inside of any framework. Start your project however you'd li
 
 ### 1. Install Gulp
 
-Eta can't do anything without Gulp, so start off a new project and install it. From the command line, navigate to the directory where you would like to run your gulp tasks.
+Eta can't do anything without Gulp, so start a new project and install it. From the command line, navigate to the directory where you would like to run your gulp tasks.
 
 ```bash
 npm install --save-dev gulp
@@ -214,6 +214,7 @@ Compiles your sass files.
 **Options:**
 ```javascript
 options.sass = {
+  // for all available options: https://github.com/sass/node-sass#options
   settings: {
     indentedSyntax: true,
     errLogToConsole: true,
@@ -224,6 +225,7 @@ options.sass = {
   }
 };
 
+// for all available options: https://www.npmjs.com/package/gulp-autoprefixer#api
 options.autoprefixer = {
   browsers: [
     'last 2 versions',
@@ -243,6 +245,7 @@ Moves image copies from a source folder, performs optimizations, then outputs th
 **Options:**
 ```javascript
 options.images = {
+  // for all available options: https://www.npmjs.com/package/gulp-imagemin#api
   settings: {
     progressive: true,
     optimizationLevel: 4
@@ -257,6 +260,7 @@ Compiles sprite assets into a sprite sheet, and generates a sass file for mixins
 **Options:**
 ```javascript
 options.sprites = {
+  // for all available options: https://www.npmjs.com/package/sprity#options
   settings: {
     retina: true,
     dimension: [
@@ -307,7 +311,7 @@ Creates static HTML files from HTML partials
 ```javascript
 options.static = {
   extension: ".html",
-  // see https://www.npmjs.com/package/gulp-file-include for available settings
+  // For all available settings: https://www.npmjs.com/package/gulp-file-include
   settings: {
     prefix: '@@',
     basepath: '@file'
@@ -341,8 +345,8 @@ Starts Browser Sync and runs `watch` in tandem.
 ```javascript
 config.browserSync = {
   useBrowserSync: true,
-  // See http://www.browsersync.io/docs/options/ for a complete list of configuration options
-  config: {
+  // For all available settings: http://www.browsersync.io/docs/options/
+  settings: {
     server: appDir,
     open: true,
     notify: false,
