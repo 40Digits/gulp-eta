@@ -21,8 +21,6 @@ Eta includes the following tools, tasks, and workflows:
 
 - [Node.js](https://nodejs.org/download/)
 - [Gulp](https://github.com/gulpjs/gulp)
-- [Cairo](https://github.com/Automattic/node-canvas/wiki/installation---osx)
-- [Canvas](https://github.com/Automattic/node-canvas/wiki/installation---osx)
 
 ***
 
@@ -30,7 +28,7 @@ Eta is made to work inside of any framework. Start your project however you'd li
 
 ### 1. Install Gulp
 
-Eta can't do anything without Gulp, so start a new project and install it. From the command line, navigate to the directory where you would like to run your gulp tasks.
+Eta can't do anything without Gulp. From the command line, navigate to the directory where you would like to run your gulp tasks.
 
 ```bash
 npm install --save-dev gulp
@@ -337,6 +335,26 @@ config.watch = {
 };
 ```
 
+To add a new dir to watch you need to add it to `scaffold.source` and then reference the name of the folder in the `watch` object.
+
+**Example:**
+```javascript
+eta(gulp, {
+  scaffold: {
+    source: {
+      custom: 'my-custom-dir'
+    }
+  },
+  watch: {
+    custom: 'my-custom-task'
+  }
+});
+
+gulp.task('my-custom-task', function() {
+  console.log('this task is super custom');
+});
+```
+
 ### `browserSync`
 
 Starts Browser Sync and runs `watch` in tandem.
@@ -370,17 +388,3 @@ Minifies your compiled JavaScript files
 ### `production`
 
 Re-builds optimized, compressed css and js files to the assets folder, as well as output their file sizes to the console. It's a shortcut for running the following tasks: `['minifyCss', 'uglifyJs']`.
-
-***
-
-## Documentation
-Visit our wiki for [detailed documentation on features and support](https://github.com/40Digits/gulp-starter/wiki).
-
-## Troubleshooting
-If you are running into canvas errors, please review the [installation guide](https://github.com/Automattic/node-canvas/wiki/installation---osx) for canvas. 
-
-If you are receiving `Package xcb-shm was not found`, please run the following commands:
-- If you are using Fish `set -xU PKG_CONFIG_PATH /usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig`
-- If you are using s/iTerm/general sh `export PKG_CONFIG_PATH /usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig:$PKG_CONFIG_PATH` or `export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig`
-
-For additional install help, [view the installation guide](https://github.com/Automattic/node-canvas/wiki/installation---osx).
