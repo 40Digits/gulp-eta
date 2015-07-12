@@ -14,4 +14,4 @@ config.scaffold = {
   }
 };
 
-gulp.tasks = eta(config);
+eta(gulp, config);

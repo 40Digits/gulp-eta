@@ -4,19 +4,18 @@
   Returns gulp tasks to a parent app
 */
 
-var gulp = require('gulp');
 var p = require('path');
 var plugins = require('gulp-load-plugins')({ lazy: true });
 var browserSync = require('browser-sync');
 var tasks = require('./lib/tasks');
 var defaultConfig = require('./lib/config.js');
 
-// A convenience function to return a gulp task
-var getTask = function(task, config) {
-  return tasks[task](gulp, plugins, config);
-};
-
-module.exports = function(options) {
+module.exports = function(gulp, options) {
+  // A convenience function to return a gulp task
+  var getTask = function(task, config) {
+    return tasks[task](gulp, plugins, config);
+  };
+  
   options = options ? options : {};
   // Set up the configuration for the tasks
   // Passing in the base path for the parent app
@@ -42,6 +41,5 @@ module.exports = function(options) {
   gulp.task('production', ['minifyCss', 'uglifyJs']);
   gulp.task('default', config.default.tasks);
 
-  // Expose the tasks for consumption
-  return gulp.tasks;
+  return gulp;
 };

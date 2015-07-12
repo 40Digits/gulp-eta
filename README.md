@@ -28,24 +28,27 @@ Eta includes the following tools, tasks, and workflows:
 
 Eta is made to work inside of any framework. Start your project however you'd like; Rails, Express, Wordpress, etc. Then follow these steps.
 
-### 1. Install Eta
+### 1. Install Gulp
 
-From the command line, navigate to the directory where you would like to run your gulp tasks.
+Eta can't do anything without Gulp, so start off a new project and install it. From the command line, navigate to the directory where you would like to run your gulp tasks.
+
+```bash
+npm install --save-dev gulp
+```
+
+### 2. Install Eta
 
 ```bash
 npm install --save-dev gulp-eta
 ```
-This adds Eta to your `node_modules` directory along with all of its dependencies. See [troubleshooting](https://github.com/40Digits/eta#troubleshooting) section if you run into errors.
 
-### 2. Install Gulp
-```bash
-npm install --save-dev gulp
-```
-In order to use `gulp` in the root of your app, you need to have a copy of Gulp installed.
+This adds Eta to your `node_modules` directory along with all of its dependencies. See [troubleshooting](https://github.com/40Digits/eta#troubleshooting) section if you run into errors.
 
 ### 3. Create `gulpfile.js`
 
-In your current working directory, create a file called `gulpfile.js` which serves as the configuration file for Gulp. Here is where you link up Eta. Eta returns an object of Gulp tasks which you can set on `gulp.tasks`. One great thing is that you aren't limited to what Eta provides! You can declare your own custom tasks, too.
+In your current working directory, create a file called `gulpfile.js` which serves as the configuration file for Gulp. Here is where you link up Eta. Eta adds tasks to your Gulp module.
+
+One great thing is that you aren't limited to what Eta provides! You can declare your own custom tasks, too.
 
 Your `gulpfile` should look something like this:
 
@@ -54,8 +57,9 @@ Your `gulpfile` should look something like this:
 var gulp = require('gulp');
 var eta = require('gulp-eta');
 
-// instantiate eta with some options
-gulp.tasks = eta({
+// instantiate eta passing in `gulp` as the first arg
+// and then your configuration object as the second arg
+eta(gulp, {
   // your options
 });
 

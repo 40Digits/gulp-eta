@@ -34,4 +34,4 @@ config.browserify = {
   ]
 };
 
-gulp.tasks = eta(config);
+eta(gulp, config);
