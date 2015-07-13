@@ -18,7 +18,7 @@
 // }
 
 //---------------------------------
-// Font Options
+// Font Variables
 //---------------------------------
 
 // Variables best utilized for font services without family grouping.
@@ -43,6 +43,10 @@ $fonts: (
 		bold: $font-bold
 	)
 );
+
+//---------------------------------
+// Font function & mixin
+//---------------------------------
 
 // Font Function
 @function setfont($name, $weight: regular) {
@@ -69,52 +73,3 @@ $fonts: (
 	}
 	font-weight: $weight;
 }
-
-
-//----------------------------------
-// Icon Fonts
-//----------------------------------
-
-@font-face {
-	font-family: 'icon-font';
-	src: url('assets/fonts/icon-font/icon-font.eot');
-	src: url('assets/fonts/icon-font/icon-font.eot#iefix') format('embedded-opentype'),
-		 url('assets/fonts/icon-font/icon-font.woff') format('woff'),
-		 url('assets/fonts/icon-font/icon-font.ttf') format('truetype'),
-		 url('assets/fonts/icon-font/icon-font.svg#icon-font') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-// Icon Font Placeholder
-%icon-font {
-	font-family: "icon-font" !important;
-	width: 1em;
-	margin: 0;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-align: center;
-	text-decoration: inherit;
-	text-transform: none;
-	line-height: 1em;
-	speak: none;
-}
-
-// Mixin to get icon-fonts going.
-// DO NOT APPLY STYLES TO MIXIN - ACTS AS A RESET
-// example usage: @include icon-font(icon-name);
-@mixin icon-font($icon: false) {
-	@extend %icon-font;
-
-	@if $icon == "icon-name" {
-		content: '\e800';
-	}
-}
-
-[class^="icon-"]:before, [class*=" icon-"]:before {
-	@include icon-font();
-}
-
-// Icon Font Glyph Code
-.icon-example:before { content: '\e800'; }
