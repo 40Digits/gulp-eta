@@ -2,11 +2,16 @@
 // WORDPRESS DEFAULT
 //=================================
 
-// Default wordpress classes used inside the wysiwyg editor. Has been made responsive for image usage.
+// Default wordpress classes used inside the wysiwyg editor.
+// Has been made responsive for image usage.
 
-$margin-right:      5px 0 20px 20px;
-$margin-left:       5px 20px 20px 0;
-$margin-center:     5px auto 0 auto;
+$margin-right:  rem(5px 0 20px 20px);
+$margin-left:   rem(5px 20px 20px 0);
+$margin-center: rem(5px auto 0 auto);
+
+//---------------------------------
+// Helper Classes
+//---------------------------------
 
 .alignnone {
 	margin: 0;
@@ -40,7 +45,10 @@ div.aligncenter {
 }
 
 
-// image links
+//---------------------------------
+// Image links
+//---------------------------------
+
 a img {
 	&.alignleft,
 	&.alignright {
@@ -77,13 +85,16 @@ a img {
 }
 
 
-// captions
+//---------------------------------
+// Captions
+//---------------------------------
+
 .wp-caption {
 	width: 100% !important;
 	max-width: 100%;
-	padding: 0 0 10px;
+	padding: rem(0 0 10px);
 	text-align: left;
-	margin-bottom: 20px;
+	margin-bottom: rem(20px);
 
 	a,
 	a:hover {
@@ -93,7 +104,7 @@ a img {
 	img {
 		border: 0 none;
 		height: auto;
-		margin: 0 0 5px;
+		margin: rem(0 0 5px);
 		max-width: 100%;
 		padding: 0;
 		width: 100%;
@@ -120,22 +131,22 @@ a img {
 	&.alignleft,
 	&.alignright {
 		@include mq(mini) {
-			width: 250px !important;
+			width: rem(250px) !important;
 		}
 		@include mq(medium) {
 			width: 100%;
-			max-width: 340px;
+			max-width: rem(340px);
 		}
 	}
 
 	.wp-caption-text {
-		@include setfont(generic);
-		font-size: rem(12);
+		@include setfont(default);
+		font-size: rem(12px);
 		color: #777;
-		line-height: 16px;
-		padding: 0 0 10px;
+		line-height: rem(16px);
+		padding: rem(0 0 10px);
 		margin: 0;
-		border-bottom: 1px solid rgba(192, 192, 193, 0.2);
+		border-bottom: rem(1px) solid rgba(192, 192, 193, 0.2);
 	}
 }
 

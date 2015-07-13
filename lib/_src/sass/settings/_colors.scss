@@ -2,9 +2,12 @@
 // COLORS
 //=================================
 
+//---------------------------------
 // Color Map
+//---------------------------------
+
 $colors: (
-	black: #000,
+	black: #2C3E50,
 	white: #fff,
 	gray: (
 		base: #999,
@@ -17,6 +20,10 @@ $colors: (
 		dark: #264d4e
 	)
 );
+
+//---------------------------------
+// setcolor Function
+//---------------------------------
 
 /** Returns a color with an optional tone from the map
  *

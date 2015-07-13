@@ -16,6 +16,11 @@
 		-ms-filter: none !important
 	}
 
+	body {
+		max-width: 8in;
+		margin: 0 auto;
+	}
+
 	a,
 	a:visited {
 		text-decoration: underline;
@@ -23,6 +28,11 @@
 
 	a[href]:after {
 		content: " (" attr(href) ")";
+		font-style: italic;
+		text-transform: none;
+		@include setfont(default);
+		font-size: rem(11px);
+		opacity: .8;
 	}
 
 	abbr[title]:after {
