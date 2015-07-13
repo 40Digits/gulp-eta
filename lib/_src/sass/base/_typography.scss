@@ -22,7 +22,7 @@ html {
 
 body {
 	background: #fff;
-	color: #000;
+	color: setcolor(black);
 	font-size: $body-font-size;
 	@include font-smoothing;
 }

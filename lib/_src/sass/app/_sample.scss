@@ -14,15 +14,35 @@
 	text-transform: uppercase;
 	padding: rem(30px);
 	margin-bottom: rem(50px);
+	color: #E74C3C;
+	h1 {
+		font-weight: inherit;
+	}
+}
+
+.col-wrap {
+	width: 100%;
+	max-width: rem(700px);
+	margin: rem(0 auto);
+	h2 {
+		display: inline-block;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 700;
+		font-size: rem(16px);
+		margin-bottom: rem(20px);
+		border-bottom: 1px solid rgba(setcolor(black), .1);
+	}
 }
 
 .sample-sprites,
 .sample-symbols {
-	width: 100%;
+	width: calc(50% - 20px);
+	float: left;
 	max-width: 600px;
-	margin: rem(0 auto 40px);
+	margin: rem(0 10px 40px);
 	padding: rem(40px);
 	border: 1px solid rgba(#000, .2);
+	border-radius: rem(5px);
 
 	i {
 		display: block;
@@ -38,14 +58,14 @@
 	.icon-one {
 		&:before {
 			content: "";
-			@extend .sprite;
+			@extend .sprite-sample;
 			@include sprite($sun);
 		}
 	}
 	.icon-two {
 		&:before {
 			content: "";
-			@extend .sprite;
+			@extend .sprite-sample;
 			@include sprite($air);
 		}
 	}
@@ -63,7 +83,7 @@
 		font-size: rem(30px);
 		&:before {
 			@include symbols(briefcase);
-			color: red;
+			color: #3498DB;
 		}
 	}
 }
