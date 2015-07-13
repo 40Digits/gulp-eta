@@ -335,9 +335,13 @@ config.watch = {
 };
 ```
 
-To add a new dir to watch you need to add it to `scaffold.source` and then reference the name of the folder in the `watch` object.
+**To add a new dir to watch:**
 
-**Example:**
+1. Add it to `scaffold.source`
+3. Add a new glob for the files in that folder
+2. Add the folder in the `watch` config along with the task you want to run when changes are made.
+
+*Example:*
 ```javascript
 eta(gulp, {
   scaffold: {
@@ -345,13 +349,16 @@ eta(gulp, {
       custom: 'my-custom-dir'
     }
   },
+  globs: {
+    custom: '**/*.+(txt)'
+  },
   watch: {
     custom: 'my-custom-task'
   }
 });
 
 gulp.task('my-custom-task', function() {
-  console.log('this task is super custom');
+  console.log('this task is super awesome');
 });
 ```
 
