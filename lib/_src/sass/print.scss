@@ -8,7 +8,7 @@ $print-media: true;
 // Reset
 //---------------------------------
 
-@import "base/reset";
+@import "helpers/reset";
 
 //---------------------------------
 // Settings
@@ -21,16 +21,6 @@ $print-media: true;
 //---------------------------------
 
 @import "helpers/all";
-
-//---------------------------------
-// Base
-//---------------------------------
-
-// Default Base
-@import "base/all";
-
-// CMS Related
-// @import "base/cms-wordpress";
 
 //---------------------------------
 // Layout

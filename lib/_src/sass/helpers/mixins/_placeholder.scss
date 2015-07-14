@@ -1,4 +1,9 @@
-// Placeholder Mixin
+//=================================
+// PLACEHOLDER MIXIN
+//=================================
+
+// @extend %placeholder
+
 @mixin placeholder {
 	&::-webkit-input-placeholder {
 		@content;
