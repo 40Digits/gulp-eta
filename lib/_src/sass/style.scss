@@ -21,10 +21,11 @@
 @import "utils/all";
 
 //---------------------------------
-// Base
+// Base + Susy
 //---------------------------------
 
 @import "base/all";
+@import "vendor/susy-sass/susy";
 
 //---------------------------------
 // Layout
