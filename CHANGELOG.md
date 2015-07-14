@@ -4,32 +4,35 @@
 * Added in BrowserSync support & removed LiveReload
 * Sass globbing does not work due to bug in libsass update
 * Updated sprite generation to a new package. Crisp sprites now!
-* Updated `index.html` with wysiwyg, styles, & sprite usage
+* Updated `index.html` sample with wysiwyg, symbols, & sprite usage
 * Removed Media Query Combine as it wasn't combining media queries correctly
 
 ## Browserify
 
 **Changes**
-* Change Item
+* Item
 
 **Added**
-* Added Item
+* Item
 
 **Removed**
-* Removed Item
+* Item
 
 ## Sass
 
 **Changes**
 * Converted remaining px values to rem
+* `/app/` is now `/pages/`
+* `/helpers/` is now `/util/`
 * Moved clearfix helpers from `/base/reset.scss` to `/utils/utilities.scss`
-* Added in additional default for print styles.
 
 **Added**
-* Mixin to manage font-size & line-height through mixin. `/util/mixins/type.scss`
+* Mixin to manage font-size & line-height `/util/mixins/type.scss`
 * `/components/` folder to handle smaller widget style modules
+* Added in additional defaults for print styles
 
 **Removed**
-* Wysiwyg styles export to WP admin. (styling & admin CP issues)
+* Removed wysiwyg styles export to WP admin. (styling & admin CP issues)
 * `/vendor/` should only contain a sample file now
-* Removed all mentions of fontello as we have our own symbol font now
+* Removed all mentions of fontello as we have our own symbol font
+* Removed `/layout/sidebar.scss` as it wasn't being utilizied
