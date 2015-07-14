@@ -36,3 +36,10 @@
 * `/vendor/` should only contain a sample file now
 * Removed all mentions of fontello as we have our own symbol font
 * Removed `/layout/sidebar.scss` as it wasn't being utilizied
+
+## Sprites
+
+**Changes**
+* You can have multiple sprite sets now. Simply organize sprites through folders in `/_src/sprites/`
+* New file names would be `sprite-folder_name`
+* You still have to `@extend .sprite-folder_name` to pull in correct sprite
