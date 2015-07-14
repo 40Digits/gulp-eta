@@ -182,7 +182,25 @@ config.default = {
 
 ### `init`
 
-Creates a `_src` directory and installs some starter modules. If you run this a second time it will abort if the `_src` directory has already been created.
+Creates a `_src` directory, installs some starter modules. If you run this a second time it will abort if the `_src` directory has already been created.
+
+Use `-p` or `--proxy` to set the name of the localhost for your project during initialization. Using the flag without any arguments will create a hostname using the name of the directory where your gulpfile is located prepended with "l.".
+
+*Examples:*
+
+```bash
+gulp init -p
+// uses l.DIRNAME for proxy
+
+gulp init --proxy
+// uses l.DIRNAME for proxy
+
+gulp init -p super-cool.lh
+// uses super-cool.lh for proxy
+
+gulp init --proxy awesome.local
+// uses awesome.local for proxy
+```
 
 *Note:* [Make sure your scaffold is configured](#scaffold) before you run this.
 

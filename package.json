@@ -52,6 +52,7 @@
     "js-beautify": "^1.5.10",
     "lodash": "^3.9.3",
     "minimatch": "^2.0.8",
+    "minimist": "^1.1.1",
     "mkdirp": "^0.5.1",
     "monocle": "^1.1.51",
     "ncp": "^2.0.0",
