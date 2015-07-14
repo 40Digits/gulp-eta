@@ -2,7 +2,7 @@
 // PLACEHOLDER MIXIN
 //=================================
 
-// @extend %placeholder
+// @extend %placeholder {..}
 
 @mixin placeholder {
 	&::-webkit-input-placeholder {

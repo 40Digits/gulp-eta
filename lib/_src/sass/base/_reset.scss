@@ -31,8 +31,8 @@ time, mark, audio, video {
 	background: transparent;
 }
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, main, menu, nav, section {
+main, article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
@@ -194,32 +194,4 @@ kbd,
 samp {
 	font-family: monospace,
 	sans-serif;
-}
-
-%cf {
-	zoom: 1;
-	&:before,
-	&:after {
-		content: "\0020";
-		display: block;
-		height: 0;
-		overflow: hidden;
-	}
-	&:after {
-		clear: both;
-	}
-}
-
-@mixin cf {
-	zoom: 1;
-	&:before,
-	&:after {
-		content: "\0020";
-		display: block;
-		height: 0;
-		overflow: hidden;
-	}
-	&:after {
-		clear: both;
-	}
 }

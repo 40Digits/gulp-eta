@@ -1,5 +1,5 @@
 //=================================
-// SAMPLE APP
+// SAMPLE PAGE
 //=================================
 
 //---------------------------------
@@ -21,29 +21,44 @@
 }
 
 .col-wrap {
+	@include cf;
 	width: 100%;
 	max-width: rem(700px);
 	margin: rem(0 auto);
-	h2 {
-		display: inline-block;
-		font-family: 'Open Sans', sans-serif;
-		font-weight: 700;
-		font-size: rem(16px);
-		margin-bottom: rem(20px);
-		border-bottom: 1px solid rgba(setcolor(black), .1);
+	.wysiwyg {
+		padding: rem(0 10px);
 	}
 }
 
 .sample-sprites,
 .sample-symbols {
-	width: calc(50% - 20px);
+	float: left;
+	width: calc(100% - 20px);
 	float: left;
 	max-width: 600px;
 	margin: rem(0 10px 40px);
-	padding: rem(40px);
-	border: 1px solid rgba(#000, .2);
+	padding: rem(0 40px 40px);
+	border: 1px solid rgba(setcolor(black), .2);
 	border-radius: rem(5px);
-
+	overflow: hidden;
+	@include mq(small) {
+		width: calc(50% - 20px);
+		margin: rem(0 10px 40px);
+	}
+	// heading
+	h2 {
+		display: inline-block;
+		width: calc(100% + 80px);
+		left: rem(-40px);
+		padding: rem(10px 40px);
+		background: setcolor(black);
+		color: #fff;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 700;
+		font-size: rem(16px);
+		margin-bottom: rem(40px);
+	}
+	// icons
 	i {
 		display: block;
 		margin-bottom: rem(30px);

@@ -6,30 +6,14 @@
 // Usage
 //---------------------------------
 
-// ================================
-// Modernizr mixin
-//
-// Table of contents:
-// 1. Modernizr mixin
-//   1.1 Generate placholder name and selectors
-//   1.2 Define placholder and print @content
-//   1.3 Define feature selector and extend the placeholder
-// 2. Aliases
-//   2.1 Yep alias
-//   2.2 Nope alias
-// 3. Demo
-//
-// Usage:
 // .my-selector {
-//   @include yep($features) { ... }
-//   @include nope($features) { ... {
+//   @include yep($features) {..}
+//   @include nope($features) {..}
 // }
-//
-// ================================
 
-// ================================
-// 1. Modernizr mixin
-// ================================
+//---------------------------------
+// Modernizr mixin
+//---------------------------------
 
 @mixin modernizr($features, $supports) {
 
@@ -48,8 +32,6 @@
 
 
 	// 1.1 Generate placeholder and selectors
-	// =====================================
-
 	@each $feature in $features {
 
 		// Making sure $feature is a string
@@ -77,16 +59,12 @@
 	@if $everything-okay == true {
 
 		// 1.2 Define the placholder and print @content
-		// =====================================
-
 		#{$placeholder} & {
 			@content;
 		}
 
 
 		// 1.3 Define feature selector(s) and extend the placeholder
-		// =====================================
-
 		@at-root #{$selector} {
 			@extend #{$placeholder};
 		}
@@ -94,23 +72,18 @@
 	}
 }
 
-// ================================
+//---------------------------------
 // 2. Aliases
-// ================================
+//---------------------------------
 
 	// 2.1 Yep alias
-	// =====================================
-
 	@mixin yep($features...) {
 		@include modernizr($features, $supports: true) {
 			@content;
 		}
 	}
 
-
 	// 2.2 Nope alias
-	// =====================================
-
 	@mixin nope($features...) {
 		@include modernizr($features, $supports: false) {
 			@content;

@@ -1,5 +1,5 @@
 //=================================
-// TYPOGRAPHY
+// TYPE
 //=================================
 
 //---------------------------------
@@ -22,13 +22,14 @@ html {
 
 body {
 	background: #fff;
-	color: setcolor(black);
+	color: #2C3E50;
+	@include setfont(default);
 	font-size: $body-font-size;
 	@include font-smoothing;
 }
 
 a {
-	color: setcolor(black);
+	color: #2C3E50;
 	text-decoration: none;
 	&:hover,
 	&:focus,
@@ -39,6 +40,7 @@ a {
 		outline: none;
 	}
 }
+
 
 //---------------------------------
 // Headlines
@@ -51,11 +53,11 @@ h4,
 h5,
 h6 {
 	line-height: 1;
-
 	a {
 		color: #000;
 	}
 }
+
 
 //---------------------------------
 // Text Components
@@ -64,7 +66,7 @@ h6 {
 p,
 dl,
 address {
-	font-size: rem(16px);
+	@extend %type-medium;
 }
 
 p,

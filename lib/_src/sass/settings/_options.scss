@@ -19,7 +19,7 @@ $base-font-size: 10px !default;
 $rem-with-px-fallback: false !default;
 
 // Import unit function
-@import "../helpers/functions/units";
+@import "../utils/functions/units";
 
 
 //---------------------------------
@@ -44,8 +44,9 @@ $timing-fast:       350ms;
 // Print
 $print-media:       false !default;
 
+
 //---------------------------------
-// Media Query
+// Media Query Settings
 //---------------------------------
 
 // Max Tablet Device Width

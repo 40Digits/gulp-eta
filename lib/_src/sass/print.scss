@@ -8,7 +8,7 @@ $print-media: true;
 // Reset
 //---------------------------------
 
-@import "helpers/reset";
+@import "base/reset";
 
 //---------------------------------
 // Settings
@@ -20,7 +20,13 @@ $print-media: true;
 // Helpers
 //---------------------------------
 
-@import "helpers/all";
+@import "utils/all";
+
+//---------------------------------
+// Base
+//---------------------------------
+
+@import "base/all";
 
 //---------------------------------
 // Layout
@@ -41,7 +47,13 @@ $print-media: true;
 @import "modules/all";
 
 //---------------------------------
+// Components
+//---------------------------------
+
+@import "components/all";
+
+//---------------------------------
 // Application
 //---------------------------------
 
-@import "app/all";
+@import "pages/all";

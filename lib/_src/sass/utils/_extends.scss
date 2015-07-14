@@ -1,0 +1,104 @@
+//=================================
+// EXTENDS & PLACEHOLDERS
+//=================================
+
+//---------------------------------
+// Misc %placeholders
+//---------------------------------
+
+%module-padding {
+	padding-top: rem(90px);
+	padding-bottom: rem(90px);
+}
+
+%text-shadow {
+	text-shadow: 0px 0px 7px rgba(#000, .52);
+}
+
+
+//---------------------------------
+// Paragraph Sizing
+//---------------------------------
+
+%type-medium {
+	@include type(16, 24);
+}
+
+%type-large {
+	@include type(17, 28);
+	@include mq(large) {
+		@include type(20, 33);
+	}
+}
+
+
+//---------------------------------
+// Global Headlines
+//---------------------------------
+
+%hsize-small {
+	@include mq(medium) {
+		@include type(19, 28);
+	}
+}
+
+%hsize-medium {
+	@include type(19, 28);
+	@include mq(medium) {
+		@include type(28, 40);
+	}
+}
+
+%hsize-large {
+	@include type(23, 33);
+	@include mq(medium) {
+		@include type(33, 48);
+	}
+}
+
+
+//---------------------------------
+// Wysiwyg Styles
+//---------------------------------
+
+%wysiwyg {
+
+	h1,
+	h2 {
+		@extend %hsize-large;
+		font-weight: 300;
+	}
+
+	h3,
+	h4 {
+		@extend %hsize-medium;
+		font-weight: 400;
+	}
+
+	h5,
+	h6 {
+		@extend %hsize-small;
+		font-weight: 700;
+	}
+
+	p,
+	li {
+		@extend %type-medium;
+	}
+
+	a {
+		color: #E74C3C;
+	}
+
+	p,
+	ul,
+	ol {
+		margin-bottom: rem(30px);
+	}
+
+	ul,
+	ol {
+		margin-left: rem(30px);
+	}
+
+}
