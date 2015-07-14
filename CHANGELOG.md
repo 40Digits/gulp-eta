@@ -6,6 +6,7 @@
 * Updated sprite generation to a new package. Crisp sprites now!
 * Updated `index.html` sample with wysiwyg, symbols, & sprite usage
 * Removed Media Query Combine as it wasn't combining media queries correctly
+* Broke out the config file into individual modules for better organization
 
 ## Browserify
 
