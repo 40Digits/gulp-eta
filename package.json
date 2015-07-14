@@ -1,6 +1,6 @@
 {
   "name": "gulp-eta",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "description": "A starter set of Gulp tasks to do badass development.",
   "main": "index.js",
   "scripts": {
