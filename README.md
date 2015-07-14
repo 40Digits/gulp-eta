@@ -9,9 +9,9 @@ For 40Digits, Eta serves as our build script for internal projects. The build sc
 Eta includes the following tools, tasks, and workflows:
 
 - [Browserify](http://browserify.org/)
-- [SASS](http://sass-lang.com/) (libsass with [source maps](https://github.com/sindresorhus/gulp-ruby-sass#sourcemap), [autoprefixer](https://github.com/sindresorhus/gulp-autoprefixer), and [combine media-queries](https://www.npmjs.com/package/gulp-combine-mq))
+- [Sass](http://sass-lang.com/) (libsass with [source maps](https://github.com/sindresorhus/gulp-ruby-sass#sourcemap), and [autoprefixer](https://github.com/sindresorhus/gulp-autoprefixer))
 - [Image optimization](https://www.npmjs.com/package/gulp-imagemin)
-- [Sprite generation](https://www.npmjs.com/package/css-sprite)
+- [Sprite generation](https://www.npmjs.com/package/sprity)
 - [Custom Icon Font generation](https://www.npmjs.com/package/gulp-iconfont)
 - Error handling in the console [and in Notification Center](https://github.com/mikaelbr/gulp-notify)
 - Compression task for production builds (CSS + JS)
@@ -67,7 +67,7 @@ gulp.task('mytask', function() {
 });
 ```
 
-Checkout the [examples](/examples) for some common configuration.
+Checkout the [examples](/examples) for some common configurations.
 
 ### 4. Your choice
 
@@ -145,6 +145,8 @@ The folder stucture looks like this:
 
 **Examples:**
 
+Checkout the [examples](/examples) for some common configurations.
+
 If you need your assets folder to live in a `/public` folder:
 
 ```javascript
@@ -215,8 +217,7 @@ options.sass = {
   // for all available options: https://github.com/sass/node-sass#options
   settings: {
     indentedSyntax: true,
-    errLogToConsole: true,
-    style: 'nested'
+    outputStyle: 'nested'
   },
   globbing: {
     extensions: ['.scss', '.sass']
@@ -326,7 +327,7 @@ Watches for changes on source files, and when a file is added, removed, or edite
 // key: the source folder to watch for changes on
 // value: the task to run when a change happens
 config.watch = {
-  scripts:  'browserify', 
+  scripts:  'browserify',
   styles:   'sass',
   symbols:  'symbols',
   images:   'images',
