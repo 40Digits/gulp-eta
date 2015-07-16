@@ -24,7 +24,7 @@ Eta includes the following tools, tasks, and workflows:
 
 ***
 
-Eta is made to work inside of any framework. Start your project however you'd like; Rails, Express, Wordpress, etc. Then follow these steps.
+Eta is made to work inside of any framework. Start your project however you'd like; Rails, Express, WordPress, etc. Then follow these steps.
 
 ### 1. Install Gulp
 
