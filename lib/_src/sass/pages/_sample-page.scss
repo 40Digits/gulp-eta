@@ -102,3 +102,117 @@
 		}
 	}
 }
+
+
+.grid-samples {
+	code {
+		display: block;
+	}
+
+	h2 {
+		@extend %hsize-large;
+		text-align: center;
+		margin-bottom: rem(20px);
+	}
+	h4 {
+		@extend %hsize-small;
+		text-align: center;
+		margin-bottom: rem(20px);
+	}
+	.row > code {
+		text-align: center;
+		padding: rem(20px);
+	}
+	.row {
+		@include container(1200px);
+		background: rgba(setcolor(black), .1);
+		padding: rem(0 20px);
+		margin-bottom: rem(50px);
+	}
+	div,
+	aside,
+	article {
+		background: rgba(setcolor(black), .4);
+		padding: rem(20px);
+		margin-bottom: rem(20px);
+		color: #fff;
+	}
+}
+
+
+.grid-basic {
+	div {
+		@include span(5 of 10);
+		&:first-child {
+			@include span(5 of 10);
+		}
+		&:last-child {
+			@include span(5 of 10 last);
+		}
+	}
+}
+
+.grid-multiple {
+	div {
+		float: left;
+	}
+	.item-1 {
+		@include span(1 of 12);
+	}
+	.item-2 {
+		@include span(11 of 12 last);
+	}
+	.item-3 {
+		@include span(2 of 12);
+	}
+	.item-4 {
+		@include span(10 of 12 last);
+	}
+	.item-5 {
+		@include span(3 of 12);
+	}
+	.item-6 {
+		@include span(9 of 12 last);
+	}
+	.item-7 {
+		@include span(4 of 12);
+	}
+	.item-8 {
+		@include span(8 of 12 last);
+	}
+	.item-9 {
+		@include span(5 of 12);
+	}
+	.item-10 {
+		@include span(7 of 12 last);
+	}
+	.item-11 {
+		@include span(6 of 12);
+	}
+	.item-12 {
+		@include span(6 of 12 last);
+	}
+}
+
+.grid-nested {
+	.item-1 {
+		@include span(3 of 9);
+	}
+	.item-2 {
+		@include span(6 of 9 last);
+		> code {
+			margin-bottom: rem(20px);
+			text-align: center;
+		}
+	}
+	aside,
+	article {
+		margin-bottom: 0;
+	}
+	aside {
+		@include span(4 of 8);
+	}
+	article {
+		@include span(4 of 8 last);
+	}
+}
