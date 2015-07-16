@@ -41,11 +41,11 @@ $sun: -0px -0px 100px 100px;
 
 // @extend these to pull in the background image
 .sprite-sample {
-    background-image: url('/Dev-Projects/Eta-11/assets/Dev-Projects/Eta-11/assets/images/sprites/sprite-sample.png');
+    background-image: url('assets/images/sprites/sprite-sample.png');
   }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 .sprite-sample {
-    background-image: url('/Dev-Projects/Eta-11/assets/Dev-Projects/Eta-11/assets/images/sprites/sprite-sample@2x.png');
+    background-image: url('assets/images/sprites/sprite-sample@2x.png');
     background-size: 190px 100px;
   }
 }

@@ -49,6 +49,85 @@
     </div>
   </div>
 
+  <div class="grid-samples">
+
+    <h2>Susy Grids</h2>
+
+    <h4>Basic Grid</h4>
+
+    <section class="grid-basic row">
+      <code>@include container(1200px);</code>
+      <div class="item">
+        <code>@include span(5 of 10);</code>
+      </div>
+      <div class="item">
+        <code>@include span(5 of 10 last);<br></code>
+      </div>
+    </section>
+
+    <h4>Multiple Grids</h4>
+
+    <section class="grid-multiple row">
+      <code>@include container(1200px);</code>
+      <div class="item-1">
+        <code>(1)</code>
+      </div>
+      <div class="item-2">
+        <code>@include span(11 of 12 last);</code>
+      </div>
+      <div class="item-3">
+        <code>(2)</code>
+      </div>
+      <div class="item-4">
+        <code>@include span(10 of 12 last);</code>
+      </div>
+      <div class="item-5">
+        <code>@include span(3 of 12);</code>
+      </div>
+      <div class="item-6">
+        <code>@include span(9 of 12 last);</code>
+      </div>
+      <div class="item-7">
+        <code>@include span(4 of 12);</code>
+      </div>
+      <div class="item-8">
+        <code>@include span(8 of 12 last);</code>
+      </div>
+      <div class="item-9">
+        <code>@include span(5 of 12);</code>
+      </div>
+      <div class="item-10">
+        <code>@include span(7 of 12 last);</code>
+      </div>
+      <div class="item-11">
+        <code>@include span(6 of 12);</code>
+      </div>
+      <div class="item-12">
+        <code>@include span(6 of 12 last);</code>
+      </div>
+    </section>
+
+    <h4>Nested Grids</h4>
+
+    <section class="grid-nested row">
+      <code>@include container(1200px);</code>
+      <div class="item-1">
+        <code>@include span(3 of 9);</code>
+      </div>
+      <div class="item-2">
+        <code>@include span(6 of 9);</code>
+        <aside>
+          <code>@include span(4 of 8);</code>
+        </aside>
+        <article>
+          <code>@include span(4 of 8 last);</code>
+        </article>
+      </div>
+    </section>
+
+  </div>
+
+
   <div class="sassqwatch"></div>
 
 @@include('./partials/_footer.html')
