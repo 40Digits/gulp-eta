@@ -36,7 +36,7 @@ module.exports = function(gulp, options) {
   gulp.task('symbols', getTask('symbols', config));
   gulp.task('browserify', getTask('browserify', config));
   gulp.task('browserSync', ['watch'], getTask('browserSync', config));
-  gulp.task('uglifyJs', ['browserify'], getTask('uglifyJs', config));
+  gulp.task('uglifyJs', getTask('uglifyJs', config));
   gulp.task('minifyCss', ['sass'], getTask('minifyCss', config));
   gulp.task('production', ['minifyCss', 'uglifyJs']);
   gulp.task('default', config.default.tasks);

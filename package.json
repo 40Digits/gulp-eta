@@ -49,6 +49,7 @@
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.4",
     "js-beautify": "^1.5.10",
+    "lazypipe": "^1.0.1",
     "lodash": "^3.9.3",
     "minimatch": "^2.0.8",
     "minimist": "^1.1.1",
@@ -59,6 +60,7 @@
     "require-directory": "^2.1.1",
     "sprity": "^1.0.6",
     "sprity-sass": "^1.0.4",
+    "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   }
 }
