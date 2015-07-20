@@ -1,6 +1,6 @@
 {
   "name": "gulp-eta",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A starter set of Gulp tasks to do badass development.",
   "main": "index.js",
   "scripts": {
@@ -22,17 +22,18 @@
   "author": "Chad Watson <chad@40digits.com> (http://chadwatson.io/)",
   "contributors": [
     {
-    "name": "Besim Huskic",
-    "email": "besim@40digits.com"
+      "name": "Besim Huskic",
+      "email": "besim@40digits.com"
     },
     {
-    "name": "CK Hicks",
-    "email": "ck@40digits.com"
+      "name": "CK Hicks",
+      "email": "ck@40digits.com"
     },
     {
-    "name": "Grant Holle",
-    "email": "grant@40digits.com"
-    }],
+      "name": "Grant Holle",
+      "email": "grant@40digits.com"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/40Digits/gulp-eta/issues"
