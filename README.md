@@ -308,12 +308,12 @@ Compiles all of your CommonJS modules into bundles. Make sure you have configure
 ```javascript
 options.browserify = {
   debug: false,
-  // add objects as items in this array
-  // to make multiple bundles
-  bundles: [{
-    outputName: 'main.js',
-    entries: [] // declare the entries for each bundle here
-  }],
+  // path to the config file where you will set up your bundles
+  bundleConfig: '_src/js/config/bundles.js',
+  // to set up bundles directly in your options
+  // not recommended because using this method will not
+  // automatically bundle when using the `watch` task
+  bundles: [],
   transform: ['browserify-shim', 'browserify-ejs'],
   aliases: { "waitFor": p.join(source.scripts, "/lib/waitFor.js") },
   shim: { "jquery": "global:$" }
