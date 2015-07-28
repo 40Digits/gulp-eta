@@ -6,7 +6,6 @@
 
 var p = require('path');
 var plugins = require('gulp-load-plugins')({ lazy: true });
-var browserSync = require('browser-sync');
 var tasks = require('./lib/tasks');
 var setupConfig = require('./lib/config/setup.js');
 
@@ -17,10 +16,6 @@ module.exports = function(gulp, options) {
   };
   var config = {};
 
-  // add browser-sync to the plugins so that it can be injected
-  // into all of the dependencies
-  plugins.browserSync = browserSync;
-  
   // Setup the config from the user options
   options = options ? options : {};
   options.appDir = p.dirname(module.parent.filename);
