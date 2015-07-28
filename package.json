@@ -63,6 +63,8 @@
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.4",
     "js-beautify": "^1.5.10",
+    "jshint": "~2.8.0",
+    "jshint-stylish": "~2.0.1",
     "lazypipe": "^1.0.1",
     "lodash": "^3.9.3",
     "minimatch": "^2.0.8",
