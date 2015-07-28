@@ -4,54 +4,55 @@
 
 // Do no edit unless you know what you are doing.
 
+$public_breakpoints: (
+  'mq-tiny':      'max-tiny',
+  'mq-mini':      'mini',
+  'mq-small':     'small',
+  'mq-medium':    'medium',
+  'mq-large':     'large',
+  'mq-xlarge':    'xlarge',
+  'mq-xxlarge':   'xxlarge',
+  'mq-xxxlarge':  'xxxlarge'
+);
+
 //---------------------------------
-// Media Query Indicator Mixin
+// Setup mixins
 //---------------------------------
 
-$bp_string: '';
-
-@mixin jsbp($mq-name, $mq-visible-name) {
-	@include mq($mq-name) {
-		head {
-			font-family: $mq-visible-name;
-		}
-	}
-	$bp_string: appendString($bp_string, $mq-visible-name);
+// Tells SassQwatch the names of our breakpoints
+@mixin expose-breakpoint-names($breakpoints) {
+  @each $public, $mq in $breakpoints {
+    @include mq($mq) {
+      font-family: $public;
+    }
+  }
 }
 
-@function appendString($string, $string-to-add) {
-	@if $string == '' {
-		@return $string-to-add;
-	} @else {
-		@return #{$string},#{$string-to-add};
-	}
+// Tells SassQwatch the order of our breakpoints
+@mixin expose-breakpoint-order($breakpoints) {
+  $length: length($breakpoints);
+  $list: '';
+  $i: 1;
+
+  @each $breakpoint, $query in $breakpoints {
+    $list: $list + $breakpoint;
+
+    @if $i != $length {
+      $list: $list + ', ';
+    }
+
+    $i: $i + 1;
+  }
+  font-family: $list;
 }
 
 //---------------------------------
-// Define the JS Breakpoints
+// Expose the breakpoints
 //---------------------------------
+head {
+  @include expose-breakpoint-names($public_breakpoints);
+}
 
-// Phone Portrait Down +
-@include jsbp(max-tiny, 'mq-tiny');
-// Phone Landscape +
-@include jsbp(mini, 'mq-mini');
-// E-Readers +
-@include jsbp(small, 'mq-small');
-// Tablets +
-@include jsbp(medium, 'mq-medium');
-// Large Desktops + Tablet Landscape +
-@include jsbp(large, 'mq-large');
-// Desktops Larger +
-@include jsbp(xlarge, 'mq-xlarge');
-// Desktops Even Larger +
-@include jsbp(xxlarge, 'mq-xxlarge');
-// Desktops Even Larger +
-@include jsbp(xxxlarge, 'mq-xxxlarge');
-
-
-//---------------------------------
-// Set the Breakpoint Order
-//---------------------------------
 title {
-	font-family: $bp_string;
+  @include expose-breakpoint-order($public_breakpoints);
 }
