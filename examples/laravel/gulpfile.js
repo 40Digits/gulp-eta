@@ -7,10 +7,10 @@ var config = {};
 // Scaffold configuration
 config.scaffold = {
   source: {
-    root: 'app'
+    root: 'resources/_src'
   },
   assets: {
-    root: 'public'
+    root: 'public/assets'
   }
 };
 
