@@ -387,21 +387,23 @@ gulp.task('my-custom-task', function() {
 
 ### `browserSync`
 
-Starts Browser Sync and runs `watch` in tandem.
+Starts [Browser Sync](http://www.browsersync.io/docs/options/) and runs `watch` in tandem.
 
 **Options:**
 ```javascript
 config.browserSync = {
-  useBrowserSync: true,
-  // For all available settings: http://www.browsersync.io/docs/options/
+  before: ['watch'],
+  // See http://www.browsersync.io/docs/options/ for a complete list of configuration options
   settings: {
-    server: appDir,
+    server: true,
     open: true,
     notify: false,
     reloadOnRestart: true,
     files: [
-      p.join(assets.root, '**/*'),
-      p.join(appDir, '**/*.php'),
+      p.join(options.assets.root, '**/*.*'),
+      p.join(options.appDir, '**/*.php'),
+      p.join(options.appDir, '**/*.css'),
+      p.join(options.appDir, '**/*.html')
     ]
   }
 }
