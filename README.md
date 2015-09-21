@@ -24,7 +24,11 @@ Eta includes the following tools, tasks, and workflows:
 
 ***
 
-Eta is made to work inside of any framework. Start your project however you'd like; Rails, Express, WordPress, etc. Then follow these steps.
+Eta is made to work inside of any framework. Start your project however you'd like; Rails, Express, WordPress, etc.
+
+### 0. Don't Clone this repo
+
+Eta is designed to be installed through NPM - no cloning or downloading required! Just `cd` into your project/theme and follow these steps.
 
 ### 1. Install Gulp
 
@@ -40,7 +44,7 @@ npm install --save-dev gulp
 npm install --save-dev gulp-eta
 ```
 
-This adds Eta to your `node_modules` directory along with all of its dependencies. See [troubleshooting](https://github.com/40Digits/eta#troubleshooting) section if you run into errors.
+This adds Eta to your `node_modules` directory along with all of its dependencies.
 
 ### 3. Create `gulpfile.js`
 
