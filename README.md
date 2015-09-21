@@ -26,7 +26,7 @@ Eta includes the following tools, tasks, and workflows:
 
 Eta is made to work inside of any framework. Start your project however you'd like; Rails, Express, WordPress, etc.
 
-### 0. Don't Clone this repo
+### 0. Don't clone this repo!
 
 Eta is designed to be installed through NPM - no cloning or downloading required! Just `cd` into your project/theme and follow these steps.
 
