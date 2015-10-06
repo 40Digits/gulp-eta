@@ -50,7 +50,7 @@ $print-media:       false !default;
 //---------------------------------
 
 // Max Tablet Device Width
-$mq-tablet-landscape: em(1280px);
+$mq-tablet-landscape: em(1280px, 16px);
 
 // MQ Variables
 $mq-mini:           480px;
@@ -62,22 +62,22 @@ $mq-xxlarge:        1440px;
 $mq-xxxlarge:       1640px;
 
 // Media Query - min-width
-$mq-min-mini:       em($mq-mini);
-$mq-min-small:      em($mq-small);
-$mq-min-medium:     em($mq-medium);
-$mq-min-large:      em($mq-large);
-$mq-min-xlarge:     em($mq-xlarge);
-$mq-min-xxlarge:    em($mq-xxlarge);
-$mq-min-xxxlarge:   em($mq-xxxlarge);
+$mq-min-mini:       em($mq-mini, 16px);
+$mq-min-small:      em($mq-small, 16px);
+$mq-min-medium:     em($mq-medium, 16px);
+$mq-min-large:      em($mq-large, 16px);
+$mq-min-xlarge:     em($mq-xlarge, 16px);
+$mq-min-xxlarge:    em($mq-xxlarge, 16px);
+$mq-min-xxxlarge:   em($mq-xxxlarge, 16px);
 
 // Media Query - max-width
-$mq-max-tiny:       em($mq-mini - 1px);
-$mq-max-mini:       em($mq-small - 1px);
-$mq-max-small:      em($mq-medium - 1px);
-$mq-max-medium:     em($mq-large - 1px);
-$mq-max-large:      em($mq-xlarge - 1px);
-$mq-max-xlarge:     em($mq-xxlarge - 1px);
-$mq-max-xxlarge:    em($mq-xxxlarge - 1px);
+$mq-max-tiny:       em($mq-mini - 1px, 16px);
+$mq-max-mini:       em($mq-small - 1px, 16px);
+$mq-max-small:      em($mq-medium - 1px, 16px);
+$mq-max-medium:     em($mq-large - 1px, 16px);
+$mq-max-large:      em($mq-xlarge - 1px, 16px);
+$mq-max-xlarge:     em($mq-xxlarge - 1px, 16px);
+$mq-max-xxlarge:    em($mq-xxxlarge - 1px, 16px);
 
 // Media Query List Map
 $mq: (

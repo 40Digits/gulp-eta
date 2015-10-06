@@ -19,11 +19,11 @@
 			@if unitless($point) or unit($point) == "em" or unit($point) == "rem" or unit($point) == "%" {
 				@warn "Please use pixel values.";
 			} @else if $reverse == "max" {
-				@media screen and (max-width: em($point - 1px)) {
+				@media screen and (max-width: em($point - 1px, 16px)) {
 					@content;
 				}
 			} @else {
-				@media screen and (min-width: em($point)) {
+				@media screen and (min-width: em($point, 16px)) {
 					@content;
 				}
 			}

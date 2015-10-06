@@ -43,7 +43,7 @@ $sun: -0px -0px 100px 100px;
 .sprite-sample {
     background-image: url('assets/images/sprites/sprite-sample.png');
   }
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 72dpi) {
 .sprite-sample {
     background-image: url('assets/images/sprites/sprite-sample@2x.png');
     background-size: 190px 100px;
