@@ -33,6 +33,17 @@ select {
 	padding: rem(5px 10px);
 }
 
+// Reset Search Input
+input[type=search] {
+	-webkit-appearance: textfield;
+	&::-webkit-search-cancel-button,
+	&::-webkit-search-decoration,
+	&::-webkit-search-results-button,
+	&::-webkit-search-results-decoration {
+		-webkit-appearance: none;
+	}
+}
+
 // Make sure we are not adding the select height to multi select
 select[multiple] {
 	height: auto;
