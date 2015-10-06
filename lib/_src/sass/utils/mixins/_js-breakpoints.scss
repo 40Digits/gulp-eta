@@ -1,6 +1,6 @@
-//=================================
-// JAVASCRIPT BREAKPOINTS
-//=================================
+// ================================
+// Javascript Breakpoints
+// ================================
 
 // Do no edit unless you know what you are doing.
 
@@ -15,9 +15,9 @@ $public_breakpoints: (
   'mq-xxxlarge':  'xxxlarge'
 );
 
-//---------------------------------
+// --------------------------------
 // Setup mixins
-//---------------------------------
+// --------------------------------
 
 // Tells SassQwatch the names of our breakpoints
 @mixin expose-breakpoint-names($breakpoints) {
@@ -46,9 +46,9 @@ $public_breakpoints: (
   font-family: $list;
 }
 
-//---------------------------------
+// --------------------------------
 // Expose the breakpoints
-//---------------------------------
+// --------------------------------
 head {
   @include expose-breakpoint-names($public_breakpoints);
 }

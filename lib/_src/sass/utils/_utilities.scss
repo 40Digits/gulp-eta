@@ -1,6 +1,6 @@
-//=================================
-// UTILITIES
-//=================================
+// ================================
+// Utilities
+// ================================
 
 // Font-smoothing for OSX
 @mixin font-smoothing {
@@ -80,9 +80,9 @@
 }
 
 
-//---------------------------------
+// --------------------------------
 // Layout
-//---------------------------------
+// --------------------------------
 
 // max-width container with multiple options, see variables for options
 // ex: @include row(medium)
@@ -103,7 +103,7 @@
 }
 
 // gutter between columns, see variables for options
-// ex: @include gutter() or @include gutter(large)
+// ex: @include padding() or @include padding(large)
 @mixin padding($size: false) {
 	@if $size == large {
 		padding-left: $gutter-base;
@@ -119,9 +119,9 @@
 }
 
 
-//---------------------------------
+// --------------------------------
 // Cross Browser (legacy)
-//---------------------------------
+// --------------------------------
 
 // Cross-browser alpha transparency for old IE
 @mixin rgba($color, $alpha) {
@@ -151,9 +151,9 @@
 }
 
 
-//---------------------------------
+// --------------------------------
 // Clearfix
-//---------------------------------
+// --------------------------------
 
 %cf {
 	zoom: 1;
@@ -184,9 +184,9 @@
 }
 
 
-//---------------------------------
+// --------------------------------
 // Class Helpers
-//---------------------------------
+// --------------------------------
 
 // Clear class helpers
 .cf,

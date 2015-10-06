@@ -1,12 +1,10 @@
-//=================================
-// FONTS
-//=================================
+// ================================
+// Fonts
+// ================================
 
-//---------------------------------
+// --------------------------------
 // @font-face & @import
-//---------------------------------
-
-// @import url("http://hello.myfonts.net/count/2b0ad4");
+// --------------------------------
 
 // @font-face {
 // 	font-family: 'ClarendonBT-Roman';
@@ -17,9 +15,10 @@
 // 	font-weight: 400;
 // }
 
-//---------------------------------
+
+// --------------------------------
 // Font Variables
-//---------------------------------
+// --------------------------------
 
 // Variables best utilized for font services without family grouping.
 $font-regular: 'Regular Font Family Name', sans-serif;
@@ -29,6 +28,11 @@ $font-bold: 'Bold Font Family Name', sans-serif;
 // Variables best utilized for font services with family grouping.
 $font-name-one: 'Font Name One', sans-serif;
 $font-font-two: 'Font Name Two', sans-serif;
+
+
+// --------------------------------
+// Font Function
+// --------------------------------
 
 // Font List Map
 $fonts: (
@@ -44,11 +48,10 @@ $fonts: (
 	)
 );
 
-//---------------------------------
-// Font function & mixin
-//---------------------------------
+// ex: font-family: setfont(fontone, light)
+// 1st value is your "Font List Map" font label
+// 2nd value is the style from "Font List Map" array
 
-// Font Function
 @function setfont($name, $weight: regular) {
 	@if map-has-key($fonts, $name) {
 		@return map-get(map-get($fonts, $name), $weight);
@@ -57,7 +60,14 @@ $fonts: (
 	}
 }
 
+
+// --------------------------------
 // Font Mixin
+// --------------------------------
+
+// ex: @include setfont(font-one, 400)
+// First value is your $family and second value is your weight
+
 @mixin setfont($family: sans-serif, $weight: normal) {
 	// Default Font Stack
 	@if $family == "default" {

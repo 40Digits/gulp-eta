@@ -1,12 +1,11 @@
-//=================================
-// TYPE SETTING MIXIN
-//=================================
+// ================================
+// Type Setting Mixin
+// ================================
 
 // For easier writing of font sizes and line-heights, relatively.
 // This can be used for writing base styles, but also specific ones if necessary.
 
 $root-font-size: 10!default;
-
 
 @mixin type($target, $line-height, $context: null) {
 
@@ -42,18 +41,16 @@ $root-font-size: 10!default;
 
 }
 
-//---------------------------------
+// --------------------------------
 // Sample Usage
-//---------------------------------
+// --------------------------------
 
 // Example:
-
 // h1 {
 //  @include type(32, 36);
 // }
 
 // Output:
-
 // h1 {
 //  font-size: 2rem;
 //  line-height: 1.125;
