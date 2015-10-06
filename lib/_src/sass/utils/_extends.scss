@@ -7,12 +7,12 @@
 //---------------------------------
 
 %module-padding {
-	padding-top: rem(90px);
-	padding-bottom: rem(90px);
-}
-
-%text-shadow {
-	text-shadow: 0px 0px 7px rgba(#000, .52);
+	padding-top: rem(50px);
+	padding-bottom: rem(50px);
+	@include mq(large) {
+		padding-top: rem(90px);
+		padding-bottom: rem(90px);
+	}
 }
 
 
@@ -38,21 +38,28 @@
 
 %hsize-small {
 	@include mq(medium) {
-		@include type(19, 28);
+		@include type(20, 29);
 	}
 }
 
 %hsize-medium {
-	@include type(19, 28);
+	@include type(20, 29);
 	@include mq(medium) {
-		@include type(28, 40);
+		@include type(25, 36);
 	}
 }
 
 %hsize-large {
-	@include type(23, 33);
+	@include type(25, 36);
 	@include mq(medium) {
-		@include type(33, 48);
+		@include type(31, 45);
+	}
+}
+
+%hsize-xlarge {
+	@include type(31, 45);
+	@include mq(medium) {
+		@include type(39, 57);
 	}
 }
 
@@ -65,19 +72,19 @@
 
 	h1,
 	h2 {
-		@extend %hsize-large;
+		@extend %hsize-xlarge;
 		font-weight: 300;
 	}
 
 	h3,
 	h4 {
-		@extend %hsize-medium;
+		@extend %hsize-large;
 		font-weight: 400;
 	}
 
 	h5,
 	h6 {
-		@extend %hsize-small;
+		@extend %hsize-medium;
 		font-weight: 700;
 	}
 

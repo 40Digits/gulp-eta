@@ -87,32 +87,34 @@
 // max-width container with multiple options, see variables for options
 // ex: @include row(medium)
 @mixin row($width: false) {
-	@if $width == small {
-		max-width: $max-width-small;
-	}
-	@if $width == medium {
-		max-width: $max-width-medium;
-	}
-	@if $width == large {
-		max-width: $max-width-large;
-	}
 	width: 100%;
 	margin: 0 auto;
+	@if $width == small {
+		max-width: $max-width-small;
+	} @else if $width == medium {
+		max-width: $max-width-medium;
+	} @else if $width == large {
+		max-width: $max-width-large;
+	} @else if $width == xlarge {
+		max-width: $max-width-xlarge;
+	} @else {
+		max-width: $max-width-default;
+	}
 }
 
 // gutter between columns, see variables for options
-// ex: @include gutter or @include gutter(large)
-@mixin gutter($size: false) {
+// ex: @include gutter() or @include gutter(large)
+@mixin padding($size: false) {
 	@if $size == large {
-		padding-left: $gutter;
-		padding-right: $gutter;
+		padding-left: $gutter-base;
+		padding-right: $gutter-base;
 		@include mq(medium) {
 			padding-left: $gutter-large;
 			padding-right: $gutter-large;
 		}
 	} @else {
-		padding-left: $gutter;
-		padding-right: $gutter;
+		padding-left: $gutter-base;
+		padding-right: $gutter-base;
 	}
 }
 

@@ -27,14 +27,16 @@ $rem-with-px-fallback: false !default;
 //---------------------------------
 
 // Gutter
-$gutter:            em(10px);
-$gutter-large:      em(20px);
+$gutter-base:       rem(10px);
+$gutter-medium:     rem(15px);
+$gutter-large:      rem(30px);
 
 // Rows Max-Width
-$max-width:         em(1020px);
-$max-width-small:   em(680px);
-$max-width-medium:  em(980px);
-$max-width-large:   em(1440px);
+$max-width-default: rem(1020px);
+$max-width-small:   rem(680px);
+$max-width-medium:  rem(980px);
+$max-width-large:   rem(1220px);
+$max-width-xlarge:  rem(1440px);
 
 // Animation
 $cubic:             cubic-bezier(0.63, 0.64, 0.3, 1);
