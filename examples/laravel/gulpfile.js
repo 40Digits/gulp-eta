@@ -10,7 +10,8 @@ config.scaffold = {
     root: 'resources/_src'
   },
   assets: {
-    root: 'public/assets'
+    root: 'public/assets',
+    styles: 'css'
   }
 };
 
