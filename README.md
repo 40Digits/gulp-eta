@@ -106,22 +106,22 @@ If you want an `asset` to be in the root of your app (where your gulpfile lives)
 ```javascript
 config.scaffold = {
   source: {
-    root:     '_src',
-    images:   'images',
-    scripts:  'js',
-    sprites:  'sprites',
-    styles:   'sass',
-    symbols:  'symbols',
-    static:   'static'
+    root:       '_src',
+    images:     'images',
+    browserify: 'js',
+    sprites:    'sprites',
+    sass:       'sass',
+    symbols:    'symbols',
+    static:     'static'
   },
   assets: {
-    root:     'assets',
-    images:   'images',
-    sprites:  'images/sprites',
-    scripts:  'js',
-    styles:   '/',
-    symbols:  'fonts/symbols',
-    static:   '/'
+    root:       'assets',
+    images:     'images',
+    sprites:    'images/sprites',
+    browserify: 'js',
+    sass:       '/',
+    symbols:    'fonts/symbols',
+    static:     '/'
   }
 }
 ```
@@ -166,7 +166,7 @@ options.scaffold.source.root = 'source';
 If you want your CSS files in the assets folder:
 
 ```javascript
-options.scaffold.assets.styles = 'css';
+options.scaffold.assets.sass = 'css';
 ```
 
 ***
@@ -349,12 +349,12 @@ Watches for changes on source files, and when a file is added, removed, or edite
 // key: the source folder to watch for changes on
 // value: the task to run when a change happens
 config.watch = {
-  scripts:  'browserify',
-  styles:   'sass',
-  symbols:  'symbols',
-  images:   'images',
-  sprites:  'sprites',
-  static:   'static'
+  browserify:  'browserify',
+  sass:        'sass',
+  symbols:     'symbols',
+  images:      'images',
+  sprites:     'sprites',
+  static:      'static'
 };
 ```
 
