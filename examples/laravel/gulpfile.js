@@ -11,7 +11,7 @@ config.scaffold = {
   },
   assets: {
     root: 'public/assets',
-    styles: 'css'
+    sass: 'css'
   }
 };
 
