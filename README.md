@@ -28,69 +28,7 @@ Eta is made to work inside of any framework. Start your project however you'd li
 
 ### 0. Don't clone this repo!
 
-Eta is designed to be installed through NPM - no cloning or downloading required! Just `cd` into your project/theme and follow these steps.
-
-### 1. Install Gulp
-
-Eta can't do anything without Gulp. From the command line, navigate to the directory where you would like to run your gulp tasks.
-
-```bash
-npm install --save-dev gulp
-```
-
-### 2. Install Eta
-
-```bash
-npm install --save-dev gulp-eta
-```
-
-This adds Eta to your `node_modules` directory along with all of its dependencies.
-
-### 3. Create `gulpfile.js`
-
-In your current working directory, create a file called `gulpfile.js` which serves as the configuration file for Gulp. Here is where you link up Eta. Eta adds tasks to your Gulp module.
-
-One great thing is that you aren't limited to what Eta provides! You can declare your own custom tasks, too.
-
-Your `gulpfile` should look something like this:
-
-```javascript
-// dependencies
-var gulp = require('gulp');
-var eta = require('gulp-eta');
-
-// instantiate eta passing in `gulp` as the first arg
-// and then your configuration object as the second arg
-eta(gulp, {
-  // your options
-});
-
-// add some custom tasks if you want
-gulp.task('mytask', function() {
-  // blah blah blah
-});
-```
-
-Checkout the [examples](/examples) for some common configurations.
-
-### 4. Your choice
-
-At this point you have three options.
-
-1) You can either go ahead and run `gulp init` to use Eta's default configuration to setup your source files and install the necessary depencies.
-
-2) You can pass in your own configuration to the Eta instance in `gulpfile.js` to meet your needs, then run `gulp init` to set up all of the source files where you need them.
-
-3) You can skip `gulp init` and set up your project however you want. If you elect to go this route make sure to let Eta know where all of your source files are and where you want the compiled assets to be created using the `scaffold` option. Or else the Eta `gulp` tasks won't work.
-
-### 5. Run the tasks
-
-```bash
-gulp
-```
-This will run the `default` gulp task, which has the following task dependencies: `['browserSync', 'symbols', 'sass', 'sprites', 'images', 'browserify']`.
-
-[View all available tasks](#tasks)
+Eta is designed to be installed through NPM - no cloning or downloading required! Just `cd` into your project/theme and follow these steps: https://github.com/40Digits/gulp-eta/wiki
 
 ***
 
