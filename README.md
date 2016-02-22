@@ -351,7 +351,7 @@ config.browserSync = {
 
 Minifies your compiled stylesheets
 
-### `minifyJs`
+### `uglifyJs`
 
 Minifies your compiled JavaScript files
 
