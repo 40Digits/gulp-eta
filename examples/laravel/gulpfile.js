@@ -15,4 +15,8 @@ config.scaffold = {
   }
 };
 
+config.default = {
+  tasks: ['browserSync', 'symbols', 'sass', 'sprites', 'images', 'browserify']
+}
+
 eta(gulp, config);
