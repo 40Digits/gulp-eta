@@ -2,7 +2,6 @@
 // Form Elements
 // ================================
 // FIXME: Determine which browser prefixes, if any, can be dropped in favor of autoprefixer. #browsersupport ~bc
-// TODO: Update all colors to use getcolor()
 
 // --------------------------------
 // Default Styles
@@ -13,7 +12,7 @@ textarea,
 select {
   outline: none;
   border-radius: 0;
-  border: rem(1px) solid #eee;
+  border: $input-border-width solid $input-border-color;
   padding: rem(5px 10px);
   margin: 0;
   width: 100%;
@@ -24,13 +23,13 @@ select {
 input,
 textarea,
 label {
-  color: #eee;
+  color: $input-text-color;
 }
 
 // Add the correct appearance, but also adjust the height to fit with our input fields.
 // This only matters for apple devices (height)
 select {
-  background: #fff;
+  background: $select-background-color;
   height: rem(30px);
   padding: rem(5px 10px);
 }
@@ -70,8 +69,8 @@ label {
 input:focus,
 textarea:focus {
   outline: none;
-  border-color: #eee;
-  color: #000;
+  border-color: $input-border-focus-color;
+  color: $input-text-focus-color;
 }
 
 // Submit input specific styling
@@ -86,23 +85,21 @@ input[type="submit"] {
 // --------------------------------
 
 .placeholder {
-  color: #000;
+  color: $input-placeholder-color;
 }
 
 input,
 textarea {
   @include placeholder() {
-    color: #000;
+    color: $input-placeholder-color;
+  }
+
+  &:focus {
+    @include placeholder() {
+      color: transparent;
+    }
   }
 }
-
-input:focus,
-textarea:focus {
-  @include placeholder() {
-    color: blue;
-  }
-}
-
 
 // --------------------------------
 // Browser Specific

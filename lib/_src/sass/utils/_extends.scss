@@ -86,7 +86,7 @@
   }
 
   a {
-    color: #E74C3C; // FIXME: Determine a default value from within settings
+    color: $link-color;
   }
 
   p,

@@ -1,15 +1,14 @@
 // ================================
 // Base & Typography Defaults
 // ================================
-// TODO: Update all colors to use getcolor()
 
 // --------------------------------
 // Pseudo
 // --------------------------------
 
 ::selection {
-  background: #777;
-  color: #fff;
+  background: $body-selected-background-color;
+  color: $body-selected-foreground-color;
   text-shadow: none;
 }
 
@@ -22,21 +21,20 @@ html {
 }
 
 body {
-  background: #fff;
-  color: #2C3E50;
-  // FIXME: merge these font declarations
   @include setfont(default);
-  font-size: $body-font-size;
   @include font-smoothing;
+  font-size: $body-font-size;
+  background: $body-background-color;
+  color: $body-foreground-color;
 }
 
 a {
-  color: #2C3E50;
-  text-decoration: none;
+  color: $link-color;
+  text-decoration: $link-decoration;
 
   &:hover,
   &:focus {
-    color: getcolor(gray);
+    color: $link-hover-color;
   }
 
   &:focus {
@@ -58,7 +56,7 @@ h6 {
   line-height: 1;
 
   a {
-    color: #000;
+    color: $body-foreground-color;
   }
 }
 

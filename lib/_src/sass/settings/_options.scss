@@ -40,3 +40,32 @@ $max-width-xlarge:  rem(1440px);
 $cubic:             cubic-bezier(0.63, 0.64, 0.3, 1);
 $timing:            500ms;
 $timing-fast:       350ms;
+
+
+// --------------------------------
+// Appearance
+// --------------------------------
+
+// Default body text
+$body-background-color: getcolor(white);
+$body-foreground-color: getcolor(gray, dark);
+
+// Selected text
+$body-selected-background-color: getcolor(gray, light);
+$body-selected-foreground-color: getcolor(black);
+
+// Links
+$link-color: getcolor(teal);
+$link-hover-color: getcolor(teal, light);
+$link-decoration: none;
+
+// Inputs
+$input-border-color: getcolor(gray, light);
+$input-border-width: rem(1px);
+$input-text-color: getcolor(gray);
+$input-placeholder-color: getcolor(gray, light);
+
+$input-text-focus-color: getcolor(gray);
+$input-border-focus-color: getcolor(gray);
+
+$select-background-color: getcolor(white);
