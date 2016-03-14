@@ -1,0 +1,16 @@
+// --------------------------------
+// Z-Index
+// --------------------------------
+
+// http://www.sitepoint.com/better-solution-managing-z-index-sass/
+// http://viget.com/extend/sass-maps-and-z-indexes
+$z-layers: (
+  'pit'         : -1,
+  'default'     : 1,
+  'footer'      : 5,
+  'header'      : 10,
+  'nav'         : 20,
+  'announce'    : 30,
+  'modal'       : 40,
+  'overlay'     : 50
+);

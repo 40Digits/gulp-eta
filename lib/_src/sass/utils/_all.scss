@@ -1,7 +1,9 @@
-@import "fonts";
-@import "mixins/all";
-@import "utilities";
-@import "keyframes";
-@import "symbols";
-@import "sprites";
-@import "extends";
+@import 'functions/all';
+@import 'mixins/all';
+
+@import 'extends';
+@import 'fonts';
+@import 'keyframes';
+@import 'sprites';
+@import 'symbols';
+@import 'utilities';

@@ -1,0 +1,28 @@
+// --------------------------------
+// Get a color
+// --------------------------------
+
+// Color map is defined in `settings/_colors.scss`
+
+// Returns a color with an optional tone from the map
+//
+// @param {string}  $color_name     The base name of the color
+// @param {tone}    ($tone|'base')  The tone of that color or 'base'
+//
+// @return {string} The matching color's value from the map
+// TODO: add error protection or base fallback if a tone is not matched
+
+@function getcolor($color-name, $tone: base) {
+  @if map-has-key($colors, $color-name) {
+    $map-color-name: map-get($colors, $color_name);
+    @if (length($map-color-name) > 1) {
+      // This must be a map
+      @return map-get($map-color-name, $tone);
+    } @else {
+      // It's just a single color
+      @return $map-color-name;
+    }
+  } @else {
+    @warn "Couldn't find a color named `#{$color-name}`.";
+  }
+}

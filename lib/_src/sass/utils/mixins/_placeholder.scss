@@ -1,20 +1,24 @@
 // ================================
 // Placeholder Mixin
 // ================================
+// TODO: Remove this entire mixin and rely on autoprefixer to do this. ~bc
 
 //ex: @include placeholder()
 
 @mixin placeholder {
-	&::-webkit-input-placeholder {
-		@content;
-	}
-	&:-moz-placeholder {
-		@content;
-	}
-	&::-moz-placeholder {
-		@content;
-	}
-	&:-ms-input-placeholder {
-		@content;
-	}
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
 }

@@ -2,14 +2,29 @@
 // Z-Index Management
 // ================================
 
-// http://www.sitepoint.com/better-solution-managing-z-index-sass/
-// http://viget.com/extend/sass-maps-and-z-indexes
-// Usage: z-index: z('overlay');
+// Provides names for reusable z-index layers
 // See /settings/_options.scss for values
 
+// --------------------------------
+// Sample Usage
+// --------------------------------
+// Example:
+// --------
+//   z-index: z('overlay');
+
+// Output:
+// -------
+//   z-index: 50;
+
+// --------------------------------
+// Credits
+// --------------------------------
+// http://www.sitepoint.com/better-solution-managing-z-index-sass/
+// http://viget.com/extend/sass-maps-and-z-indexes
+
 @function z($layer) {
-	@if not map-has-key($z-layers, $layer) {
-		@warn "No layer found for `#{$layer}` in $z-layers map. Property omitted. Check inside variables/_settings.scss";
-	}
-	@return map-get($z-layers, $layer);
+  @if not map-has-key($z-layers, $layer) {
+    @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted. Check inside settings/_options.scss";
+  }
+  @return map-get($z-layers, $layer);
 }

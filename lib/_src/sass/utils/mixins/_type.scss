@@ -2,19 +2,31 @@
 // Type Setting Mixin
 // ================================
 
-// For easier writing of font sizes and line-heights, relatively.
-// This can be used for writing base styles, but also specific ones if necessary.
+// Sets the font size and line height to their relative elastic sizes.
+
+// --------------------------------
+// Sample Usage
+// --------------------------------
+// Example:
+// --------
+// h1 {
+//   @include type(32, 36);
+// }
+
+// Output:
+// -------
+// h1 {
+//   font-size: 2rem;
+//   line-height: 1.125;
+// }
 
 $root-font-size: 10!default;
 
 @mixin type($target, $line-height, $context: null) {
-
   // Is the target value unitless?
   @if unitless($target) {
-
     // Is it relying on a context value?
     @if $context != null {
-
       // Is the context unitless? If so, write out the target value in ems.
       @if unitless($context) {
         font-size: ($target / $context) * 1em;
@@ -22,11 +34,10 @@ $root-font-size: 10!default;
         @error 'Your value for `$context` is not unitless.';
       }
     }
-    // Write out the target value in rems.
     @else {
+      // Write out the target value in rems.
       font-size: ($target / $root-font-size) * 1rem;
     }
-
   } @else {
     @error 'Your value for `$target` is not unitless.';
   }
@@ -38,20 +49,4 @@ $root-font-size: 10!default;
   } @else {
     @error 'Your value for `$line-height` is not unitless.';
   }
-
 }
-
-// --------------------------------
-// Sample Usage
-// --------------------------------
-
-// Example:
-// h1 {
-//  @include type(32, 36);
-// }
-
-// Output:
-// h1 {
-//  font-size: 2rem;
-//  line-height: 1.125;
-// }

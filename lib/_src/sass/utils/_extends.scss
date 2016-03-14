@@ -1,111 +1,102 @@
 // ================================
 // Extends & Placeholders
 // ================================
-
 // --------------------------------
 // Misc %placeholders
 // --------------------------------
-
 %module-padding {
-	padding-top: rem(50px);
-	padding-bottom: rem(50px);
-	@include mq(large) {
-		padding-top: rem(90px);
-		padding-bottom: rem(90px);
-	}
+  padding-top: rem(50px);
+  padding-bottom: rem(50px);
+
+  @include mq(large) {
+    padding-top: rem(90px);
+    padding-bottom: rem(90px);
+  }
 }
-
-
 // --------------------------------
 // Paragraph Sizing
 // --------------------------------
-
 %type-medium {
-	@include type(16, 24);
+  @include type(16, 24);
 }
 
 %type-large {
-	@include type(17, 28);
-	@include mq(large) {
-		@include type(20, 33);
-	}
+  @include type(17, 28);
+  @include mq(large) {
+    @include type(20, 33);
+  }
 }
-
 
 // --------------------------------
 // Global Headlines
 // --------------------------------
-
 %hsize-small {
-	@include mq(medium) {
-		@include type(20, 29);
-	}
+  @include mq(medium) {
+    @include type(20, 29);
+  }
 }
 
 %hsize-medium {
-	@include type(20, 29);
-	@include mq(medium) {
-		@include type(25, 36);
-	}
+  @include type(20, 29);
+  @include mq(medium) {
+    @include type(25, 36);
+  }
 }
 
 %hsize-large {
-	@include type(25, 36);
-	@include mq(medium) {
-		@include type(31, 45);
-	}
+  @include type(25, 36);
+  @include mq(medium) {
+    @include type(31, 45);
+  }
 }
 
 %hsize-xlarge {
-	@include type(31, 45);
-	@include mq(medium) {
-		@include type(39, 57);
-	}
+  @include type(31, 45);
+  @include mq(medium) {
+    @include type(39, 57);
+  }
 }
-
 
 // --------------------------------
 // Wysiwyg Styles
 // --------------------------------
 
 %wysiwyg {
+  h1,
+  h2 {
+    @extend %hsize-xlarge;
+    font-weight: 300;
+  }
 
-	h1,
-	h2 {
-		@extend %hsize-xlarge;
-		font-weight: 300;
-	}
+  h3,
+  h4 {
+    @extend %hsize-large;
+    font-weight: 400;
+  }
 
-	h3,
-	h4 {
-		@extend %hsize-large;
-		font-weight: 400;
-	}
+  h5,
+  h6 {
+    @extend %hsize-medium;
+    font-weight: 700;
+  }
 
-	h5,
-	h6 {
-		@extend %hsize-medium;
-		font-weight: 700;
-	}
+  p,
+  li {
+    @extend %type-medium;
+  }
 
-	p,
-	li {
-		@extend %type-medium;
-	}
+  a {
+    color: #E74C3C; // FIXME: Determine a default value from within settings
+  }
 
-	a {
-		color: #E74C3C;
-	}
+  p,
+  ul,
+  ol {
+    margin-bottom: rem(30px);
+  }
 
-	p,
-	ul,
-	ol {
-		margin-bottom: rem(30px);
-	}
-
-	ul,
-	ol {
-		margin-left: rem(30px);
-	}
-
+  ul,
+  ol {
+    margin-left: rem(30px);
+  }
 }

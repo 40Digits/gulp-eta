@@ -1,0 +1,16 @@
+// --------------------------------
+// Media Query Settings
+// --------------------------------
+
+// Max Tablet Device Width
+// FIXME: should `16px` here be ``$body-font-size`?
+$mq-tablet-landscape: em(1280px, 16px);
+
+// MQ Variables
+$mq-mini:           480px;
+$mq-small:          600px;
+$mq-medium:         768px;
+$mq-large:          960px;
+$mq-xlarge:         1220px;
+$mq-xxlarge:        1440px;
+$mq-xxxlarge:       1640px;

@@ -1,6 +1,8 @@
 // ================================
 // Form Elements
 // ================================
+// FIXME: Determine which browser prefixes, if any, can be dropped in favor of autoprefixer. #browsersupport ~bc
+// TODO: Update all colors to use getcolor()
 
 // --------------------------------
 // Default Styles
@@ -9,74 +11,74 @@
 input,
 textarea,
 select {
-	outline: none;
-	border-radius: 0;
-	border: rem(1px) solid #eee;
-	padding: rem(5px 10px);
-	margin: 0;
-	width: 100%;
-	font-size: rem(13px);
+  outline: none;
+  border-radius: 0;
+  border: rem(1px) solid #eee;
+  padding: rem(5px 10px);
+  margin: 0;
+  width: 100%;
+  font-size: rem(13px);
 }
 
 // Unique styles that just apply to input/textarea/label
 input,
 textarea,
 label {
-	color: #eee;
+  color: #eee;
 }
 
 // Add the correct appearance, but also adjust the height to fit with our input fields.
 // This only matters for apple devices (height)
 select {
-	background: #fff;
-	height: rem(30px);
-	padding: rem(5px 10px);
+  background: #fff;
+  height: rem(30px);
+  padding: rem(5px 10px);
 }
 
 // Reset Search Input
 input[type=search] {
-	-webkit-appearance: textfield;
-	&::-webkit-search-cancel-button,
-	&::-webkit-search-decoration,
-	&::-webkit-search-results-button,
-	&::-webkit-search-results-decoration {
-		-webkit-appearance: none;
-	}
+  -webkit-appearance: textfield;
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-decoration,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+  }
 }
 
 // Make sure we are not adding the select height to multi select
 select[multiple] {
-	height: auto;
+  height: auto;
 }
 
 // Styles relevant to checkboxes
 input[type="checkbox"] {
-	vertical-align: bottom;
+  vertical-align: bottom;
 }
 
 // Styles relevant to radio buttons
 input[type="radio"] {
-	vertical-align: text-bottom;
+  vertical-align: text-bottom;
 }
 
 // Label specific styling
 label {
-	font-weight: 400;
+  font-weight: 400;
 }
 
 // Focus specific styling
 input:focus,
 textarea:focus {
-	outline: none;
-	border-color: #eee;
-	color: #000;
+  outline: none;
+  border-color: #eee;
+  color: #000;
 }
 
 // Submit input specific styling
 input[type="submit"] {
-	@extend %naked-button;
-	border-radius: 0;
-	height: auto;
+  @extend %naked-button;
+  border-radius: 0;
+  height: auto;
 }
 
 // --------------------------------
@@ -84,21 +86,21 @@ input[type="submit"] {
 // --------------------------------
 
 .placeholder {
-	color: #000;
+  color: #000;
 }
 
 input,
 textarea {
-	@include placeholder() {
-		color: #000;
-	}
+  @include placeholder() {
+    color: #000;
+  }
 }
 
 input:focus,
 textarea:focus {
-	@include placeholder() {
-		color: blue;
-	}
+  @include placeholder() {
+    color: blue;
+  }
 }
 
 
@@ -108,19 +110,19 @@ textarea:focus {
 
 // Remove extra spacing that Firefox adds to buttons
 button::-moz-focus-inner {
-	padding: 0;
-	border: 0
+  padding: 0;
+  border: 0
 }
 
 // Remove spinner from type="number"
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
-	-webkit-appearance: none;
-	margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 input[type=number] {
-	-moz-appearance: textfield;
+  -moz-appearance: textfield;
 }
 
 // Reset all styling for input and textarea, handy for mobile devices
@@ -132,6 +134,6 @@ input[type="password"],
 input[type="button"],
 input[type="submit"],
 textarea {
-	-webkit-appearance: none;
-	-moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }

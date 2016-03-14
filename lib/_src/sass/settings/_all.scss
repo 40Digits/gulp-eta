@@ -1,2 +1,5 @@
-@import "options";
-@import "colors";
+// Note: 'wp-meta' is included directly from `style.scss`
+@import 'options';
+@import 'colors';
+@import 'z-index';
+@import 'media-queries';

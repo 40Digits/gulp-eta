@@ -1,58 +1,61 @@
-// ================================
-// Default WP Meta
-// ================================
-@import "settings/wp-meta";
+// --------------------------------
+// Settings
+// --------------------------------
+
+// Print
+$print-media:       false !default;
+
+// Set up a WordPress theme meta tag
+// Note: it is very important that this comes first for WordPress projects.
+@import 'settings/wp-meta';
+
+// Settings for this project
+@import 'settings/all';
 
 // --------------------------------
 // Reset
 // --------------------------------
 
-@import "base/reset";
+@import 'base/reset';
 
 // --------------------------------
-// Settings
+// Utilities and Helpers
 // --------------------------------
 
-@import "settings/all";
-
-// --------------------------------
-// Helpers
-// --------------------------------
-
-@import "utils/all";
+@import 'utils/all';
 
 // --------------------------------
 // Base
 // --------------------------------
 
-@import "base/all";
+@import 'base/all';
 
 // --------------------------------
 // Layout
 // --------------------------------
 
-@import "layout/all";
+@import 'layout/all';
 
 // --------------------------------
 // Vendor
 // --------------------------------
 
-@import "vendor/all";
+@import 'vendor/all';
 
 // --------------------------------
 // Components
 // --------------------------------
 
-@import "components/all";
+@import 'components/all';
 
 // --------------------------------
 // Modules
 // --------------------------------
 
-@import "modules/all";
+@import 'modules/all';
 
 // --------------------------------
 // Application
 // --------------------------------
 
-@import "pages/all";
+@import 'pages/all';

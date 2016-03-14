@@ -1,5 +1,5 @@
 // ================================
-// Variables
+// Options
 // ================================
 
 // --------------------------------
@@ -15,11 +15,9 @@ $em-base: 16;
 // It needs to stay the same size as <html> font size, but in pixels
 $base-font-size: 10px !default;
 
+// TODO: Consider whether we need support for pixel fallbacks for rems in default builds. #browsersupport ~bc
 // Whether to output fallback values in px when outputting rems.
 $rem-with-px-fallback: false !default;
-
-// Import unit function
-@import "../utils/functions/units";
 
 
 // --------------------------------
@@ -42,82 +40,3 @@ $max-width-xlarge:  rem(1440px);
 $cubic:             cubic-bezier(0.63, 0.64, 0.3, 1);
 $timing:            500ms;
 $timing-fast:       350ms;
-
-// Print
-$print-media:       false !default;
-
-
-// --------------------------------
-// Media Query Settings
-// --------------------------------
-
-// Max Tablet Device Width
-$mq-tablet-landscape: em(1280px, 16px);
-
-// MQ Variables
-$mq-mini:           480px;
-$mq-small:          600px;
-$mq-medium:         768px;
-$mq-large:          960px;
-$mq-xlarge:         1220px;
-$mq-xxlarge:        1440px;
-$mq-xxxlarge:       1640px;
-
-// Media Query - min-width
-$mq-min-mini:       em($mq-mini, 16px);
-$mq-min-small:      em($mq-small, 16px);
-$mq-min-medium:     em($mq-medium, 16px);
-$mq-min-large:      em($mq-large, 16px);
-$mq-min-xlarge:     em($mq-xlarge, 16px);
-$mq-min-xxlarge:    em($mq-xxlarge, 16px);
-$mq-min-xxxlarge:   em($mq-xxxlarge, 16px);
-
-// Media Query - max-width
-$mq-max-tiny:       em($mq-mini - 1px, 16px);
-$mq-max-mini:       em($mq-small - 1px, 16px);
-$mq-max-small:      em($mq-medium - 1px, 16px);
-$mq-max-medium:     em($mq-large - 1px, 16px);
-$mq-max-large:      em($mq-xlarge - 1px, 16px);
-$mq-max-xlarge:     em($mq-xxlarge - 1px, 16px);
-$mq-max-xxlarge:    em($mq-xxxlarge - 1px, 16px);
-
-// Media Query List Map
-$mq: (
-	'mini'          : ( min-width: $mq-min-mini ),
-	'small'         : ( min-width: $mq-min-small ),
-	'medium'        : ( min-width: $mq-min-medium ),
-	'large'         : ( min-width: $mq-min-large ),
-	'xlarge'        : ( min-width: $mq-min-xlarge ),
-	'xxlarge'       : ( min-width: $mq-min-xxlarge ),
-	'xxxlarge'      : ( min-width: $mq-min-xxxlarge ),
-
-	'max-tiny'      : ( max-width: $mq-max-tiny ),
-	'max-mini'      : ( max-width: $mq-max-mini ),
-	'max-small'     : ( max-width: $mq-max-small ),
-	'max-medium'    : ( max-width: $mq-max-medium ),
-	'max-large'     : ( max-width: $mq-max-large ),
-	'max-xlarge'    : ( max-width: $mq-max-xlarge ),
-	'max-xxlarge'   : ( max-width: $mq-max-xxlarge ),
-
-	'print'         : ( print ),
-	'tab-port'      : ( screen and (min-device-width: $mq-min-medium) and (max-device-width: $mq-max-medium) and (orientation: portrait) ),
-	'tab-land'      : ( screen and (min-device-width: $mq-min-medium) and (max-device-width: $mq-tablet-landscape) and (orientation: landscape) )
-);
-
-
-// --------------------------------
-// Z-Index
-// --------------------------------
-
-// http://www.sitepoint.com/better-solution-managing-z-index-sass/
-// http://viget.com/extend/sass-maps-and-z-indexes
-$z-layers: (
-	'pit'         : -1,
-	'default'     : 1,
-	'footer'      : 5,
-	'header'      : 10,
-	'nav'         : 20,
-	'announce'    : 30,
-	'modal'       : 40,
-	'overlay'     : 50
-);

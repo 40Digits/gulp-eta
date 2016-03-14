@@ -1,10 +1,10 @@
 // ================================
-// Javascript Breakpoints
+// JavaScript Breakpoints
 // ================================
 
-// Do no edit unless you know what you are doing.
+// Warning: This file is not intended to be modified. Do not edit unless you know what you are doing.
 
-$public_breakpoints: (
+$public-breakpoints: (
   'mq-tiny':      'max-tiny',
   'mq-mini':      'mini',
   'mq-small':     'small',
@@ -50,9 +50,9 @@ $public_breakpoints: (
 // Expose the breakpoints
 // --------------------------------
 head {
-  @include expose-breakpoint-names($public_breakpoints);
+  @include expose-breakpoint-names($public-breakpoints);
 }
 
 title {
-  @include expose-breakpoint-order($public_breakpoints);
+  @include expose-breakpoint-order($public-breakpoints);
 }

@@ -8,16 +8,18 @@ $sun: -0px -0px 100px 100px;
 
 // Mixins
 @mixin sprite-width($sprite) {
-  width: nth($sprite, 3)
+  width: nth($sprite, 3);
 }
+
 @mixin sprite-height($sprite) {
-  height: nth($sprite, 4)
+  height: nth($sprite, 4);
 }
 
 // Functions
 @function sprite-width($sprite) {
   @return nth($sprite, 3);
 }
+
 @function sprite-height($sprite) {
   @return nth($sprite, 4);
 }
@@ -49,4 +51,3 @@ $sun: -0px -0px 100px 100px;
     background-size: 190px 100px;
   }
 }
-

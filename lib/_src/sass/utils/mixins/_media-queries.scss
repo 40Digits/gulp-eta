@@ -2,38 +2,112 @@
 // Media Queries
 // ================================
 
-// Do not edit unless you know what you are doing.
+// Warning: This file is not intended to be modified. Do not edit unless you know what you are doing.
+
+// The list of names for media queries are `$mq` in `settings/_options.scss`
+
+// --------------------------------
+// Sample Usage
+// --------------------------------
+// Example:
+// --------
+//   .very-special-class {
+//     padding-left: rem(20px); // Mobile-first
+//
+//     @include mq(medium) {
+//       padding-left: rem(30px);
+//     }
+//   }
+
+// Output:
+// -------
+//   .very-special-class {
+//     padding-left: rem(20px); // Mobile-first
+//
+//     @media (min-width: 48em) {
+//       padding-left: rem(30px);
+//     }
+//   }
+
+// --------------------------------
+// Set up media query sizes
+// --------------------------------
+// These use variables from `settings/_options.scss`
+// FIXME: should each of these `16px` references be ``$body-font-size`?
+
+// Media Query - min-width
+$mq-min-mini:       em($mq-mini, 16px);
+$mq-min-small:      em($mq-small, 16px);
+$mq-min-medium:     em($mq-medium, 16px);
+$mq-min-large:      em($mq-large, 16px);
+$mq-min-xlarge:     em($mq-xlarge, 16px);
+$mq-min-xxlarge:    em($mq-xxlarge, 16px);
+$mq-min-xxxlarge:   em($mq-xxxlarge, 16px);
+
+// Media Query - max-width
+$mq-max-tiny:       em($mq-mini - 1px, 16px);
+$mq-max-mini:       em($mq-small - 1px, 16px);
+$mq-max-small:      em($mq-medium - 1px, 16px);
+$mq-max-medium:     em($mq-large - 1px, 16px);
+$mq-max-large:      em($mq-xlarge - 1px, 16px);
+$mq-max-xlarge:     em($mq-xxlarge - 1px, 16px);
+$mq-max-xxlarge:    em($mq-xxxlarge - 1px, 16px);
+
+// Media Query List Map
+$mq: (
+  'mini'          : (min-width: $mq-min-mini),
+  'small'         : (min-width: $mq-min-small),
+  'medium'        : (min-width: $mq-min-medium),
+  'large'         : (min-width: $mq-min-large),
+  'xlarge'        : (min-width: $mq-min-xlarge),
+  'xxlarge'       : (min-width: $mq-min-xxlarge),
+  'xxxlarge'      : (min-width: $mq-min-xxxlarge),
+
+  'max-tiny'      : (max-width: $mq-max-tiny),
+  'max-mini'      : (max-width: $mq-max-mini),
+  'max-small'     : (max-width: $mq-max-small),
+  'max-medium'    : (max-width: $mq-max-medium),
+  'max-large'     : (max-width: $mq-max-large),
+  'max-xlarge'    : (max-width: $mq-max-xlarge),
+  'max-xxlarge'   : (max-width: $mq-max-xxlarge),
+
+  'print'         : (print),
+  'tab-port'      : (screen and (min-device-width: $mq-min-medium) and (max-device-width: $mq-max-medium) and (orientation: portrait)),
+  'tab-land'      : (screen and (min-device-width: $mq-min-medium) and (max-device-width: $mq-tablet-landscape) and (orientation: landscape))
+);
+
+// --------------------------------
+// A mixin to generate the media query
+// --------------------------------
 
 @mixin mq($point, $reverse: false) {
-
-	@if $print-media {
-  	@if $point == 'print' {
-  		@media print {
-  			@content;
-  		}
-  	} @else {
-  		@content;
-  	}
+  @if $print-media {
+    @if $point == 'print' {
+      @media print {
+        @content;
+      }
+    } @else {
+      @content;
+    }
   } @else {
-  	@if type-of($point) == "number" {
-			@if unitless($point) or unit($point) == "em" or unit($point) == "rem" or unit($point) == "%" {
-				@warn "Please use pixel values.";
-			} @else if $reverse == "max" {
-				@media screen and (max-width: em($point - 1px, 16px)) {
-					@content;
-				}
-			} @else {
-				@media screen and (min-width: em($point, 16px)) {
-					@content;
-				}
-			}
-		} @else if map-has-key($mq, $point) {
-			@media #{inspect(map-get($mq, $point))} {
-				@content;
-			}
-		} @else {
-			@warn "Couldn't find a breakpoint named `#{$point}`.";
-		}
+    @if type-of($point) == 'number' {
+      @if unitless($point) or unit($point) == 'em' or unit($point) == 'rem' or unit($point) == '%' {
+        @warn 'Please use pixel values.';
+      } @else if $reverse == 'max' {
+        @media screen and (max-width: em($point - 1px, 16px)) {
+          @content;
+        }
+      } @else {
+        @media screen and (min-width: em($point, 16px)) {
+          @content;
+        }
+      }
+    } @else if map-has-key($mq, $point) {
+      @media #{inspect(map-get($mq, $point))} {
+        @content;
+      }
+    } @else {
+      @warn "Couldn't find a breakpoint named `#{$point}`.";
+    }
   }
-
 }
