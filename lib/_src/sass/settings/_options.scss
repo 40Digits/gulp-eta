@@ -83,25 +83,25 @@ $mq-max-xxlarge:    em($mq-xxxlarge - 1px, 16px);
 
 // Media Query List Map
 $mq: (
-	'mini'          : ( min-width: $mq-min-mini ),
-	'small'         : ( min-width: $mq-min-small ),
-	'medium'        : ( min-width: $mq-min-medium ),
-	'large'         : ( min-width: $mq-min-large ),
-	'xlarge'        : ( min-width: $mq-min-xlarge ),
-	'xxlarge'       : ( min-width: $mq-min-xxlarge ),
-	'xxxlarge'      : ( min-width: $mq-min-xxxlarge ),
+  'mini'          : '(min-width: $mq-min-mini)',
+  'small'         : '(min-width: $mq-min-small)',
+  'medium'        : '(min-width: $mq-min-medium)',
+  'large'         : '(min-width: $mq-min-large)',
+  'xlarge'        : '(min-width: $mq-min-xlarge)',
+  'xxlarge'       : '(min-width: $mq-min-xxlarge)',
+  'xxxlarge'      : '(min-width: $mq-min-xxxlarge)',
 
-	'max-tiny'      : ( max-width: $mq-max-tiny ),
-	'max-mini'      : ( max-width: $mq-max-mini ),
-	'max-small'     : ( max-width: $mq-max-small ),
-	'max-medium'    : ( max-width: $mq-max-medium ),
-	'max-large'     : ( max-width: $mq-max-large ),
-	'max-xlarge'    : ( max-width: $mq-max-xlarge ),
-	'max-xxlarge'   : ( max-width: $mq-max-xxlarge ),
+  'max-tiny'      : '(max-width: $mq-max-tiny)',
+  'max-mini'      : '(max-width: $mq-max-mini)',
+  'max-small'     : '(max-width: $mq-max-small)',
+  'max-medium'    : '(max-width: $mq-max-medium)',
+  'max-large'     : '(max-width: $mq-max-large)',
+  'max-xlarge'    : '(max-width: $mq-max-xlarge)',
+  'max-xxlarge'   : '(max-width: $mq-max-xxlarge)',
 
-	'print'         : ( print ),
-	'tab-port'      : ( screen and (min-device-width: $mq-min-medium) and (max-device-width: $mq-max-medium) and (orientation: portrait) ),
-	'tab-land'      : ( screen and (min-device-width: $mq-min-medium) and (max-device-width: $mq-tablet-landscape) and (orientation: landscape) )
+  'print'         : 'print',
+  'tab-port'      : 'screen and (min-device-width: $mq-min-medium) and (max-device-width: $mq-max-medium) and (orientation: portrait)',
+  'tab-land'      : 'screen and (min-device-width: $mq-min-medium) and (max-device-width: $mq-tablet-landscape) and (orientation: landscape)'
 );
 
 
