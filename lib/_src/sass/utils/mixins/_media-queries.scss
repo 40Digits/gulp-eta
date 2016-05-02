@@ -6,34 +6,55 @@
 
 @mixin mq($point, $reverse: false) {
 
-	@if $print-media {
-  	@if $point == 'print' {
-  		@media print {
-  			@content;
-  		}
-  	} @else {
-  		@content;
-  	}
+  // if print media is enabled
+  // we are looping through all of the media query mixins
+  // if the mq equates to "print" then we wrap the content in print
+  // if anything else, we just stack the content inside of the media query mixin
+  // the idea is that all of the mobile first entries get overwritten, however a print media query will take precedence
+  @if $print-media {
+
+    @if $point == 'print' {
+      @media print {
+        @content;
+      }
+    } @else {
+      @content;
+    }
+
   } @else {
-  	@if type-of($point) == "number" {
-			@if unitless($point) or unit($point) == "em" or unit($point) == "rem" or unit($point) == "%" {
-				@warn "Please use pixel values.";
-			} @else if $reverse == "max" {
-				@media screen and (max-width: em($point - 1px, 16px)) {
-					@content;
-				}
-			} @else {
-				@media screen and (min-width: em($point, 16px)) {
-					@content;
-				}
-			}
-		} @else if map-has-key($mq, $point) {
-			@media #{inspect(map-get($mq, $point))} {
-				@content;
-			}
-		} @else {
-			@warn "Couldn't find a breakpoint named `#{$point}`.";
-		}
+
+    // check if value inside of mixin is a number
+    // if number then we use that value in the breakpoint
+    // the number needs to be a pixel value as we are going to convert it to an em
+    // we are utilizing base 16px for all em units
+    @if type-of($point) == "number" {
+      @if unitless($point) or unit($point) == "em" or unit($point) == "rem" or unit($point) == "%" {
+        @warn "Please use pixel values.";
+
+      // if max media query .. ex: @include mq(600px, max)
+      // we take the 600px and subtract 1px for the max-width to work with mobile-first
+      } @else if $reverse == "max" {
+        @media screen and (max-width: em($point - 1px, 16px)) {
+          @content;
+        }
+
+      // if min media query ... ex: @include mq(600px)
+      // we just take the unit passed and generate the min-width query
+      } @else {
+        @media screen and (min-width: em($point, 16px)) {
+          @content;
+        }
+      }
+
+    // otherwise if it's not a number
+    // we are going to check if the value matches our media query map in "settings/_options.scss"
+    } @else if map-has-key($mq, $point) {
+      @media #{inspect(map-get($mq, $point))} {
+        @content;
+      }
+    } @else {
+      @warn "Couldn't find a breakpoint named `#{$point}`.";
+    }
   }
 
 }
