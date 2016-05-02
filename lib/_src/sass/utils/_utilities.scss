@@ -123,23 +123,6 @@
 // Cross Browser (legacy)
 // --------------------------------
 
-// Cross-browser alpha transparency for old IE
-@mixin rgba($color, $alpha) {
-  $rgba: rgba($color, $alpha);
-  $ie-hex-str: ie-hex-str($rgba);
-  background-color: transparent;
-  background-color: $rgba;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
-  zoom: 1;
-}
-
-// Cross-browser opacity for old IE
-@mixin opacity($alpha) {
-  opacity: $alpha;
-  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=$alpha*100)";
-  filter: alpha(opacity=$alpha*100);
-}
-
 // Cross-browser background-cover for old IE
 // ex: @extend %bg-cover
 // https://raw.githubusercontent.com/louisremi/background-size-polyfill/gh-pages/backgroundsize.min.htc

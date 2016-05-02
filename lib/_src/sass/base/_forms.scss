@@ -83,21 +83,25 @@ input[type="submit"] {
 // Placeholders
 // --------------------------------
 
+
+// for polyfill
 .placeholder {
   color: #000;
 }
 
+// placeholder styles for regular
 input,
 textarea {
-  @include placeholder() {
-    color: #000;
+  &::placeholder {
+    // your styles
   }
 }
 
+// placeholder styles for focus
 input:focus,
 textarea:focus {
-  @include placeholder() {
-    color: blue;
+  &::placeholder {
+    // your styles
   }
 }
 
