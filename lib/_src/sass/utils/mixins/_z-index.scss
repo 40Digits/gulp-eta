@@ -8,8 +8,8 @@
 // See /settings/_options.scss for values
 
 @function z($layer) {
-	@if not map-has-key($z-layers, $layer) {
-		@warn "No layer found for `#{$layer}` in $z-layers map. Property omitted. Check inside variables/_settings.scss";
-	}
-	@return map-get($z-layers, $layer);
+  @if not map-has-key($z-layers, $layer) {
+    @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted. Check inside variables/_settings.scss";
+  }
+  @return map-get($z-layers, $layer);
 }

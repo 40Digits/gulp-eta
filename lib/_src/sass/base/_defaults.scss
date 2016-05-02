@@ -7,9 +7,9 @@
 // --------------------------------
 
 ::selection {
-	background: #777;
-	color: #fff;
-	text-shadow: none;
+  background: #777;
+  color: #fff;
+  text-shadow: none;
 }
 
 // --------------------------------
@@ -17,27 +17,27 @@
 // --------------------------------
 
 html {
-	font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-	background: #fff;
-	color: #2C3E50;
-	@include setfont(default);
-	font-size: $body-font-size;
-	@include font-smoothing;
+  background: #fff;
+  color: #2C3E50;
+  @include setfont(default);
+  font-size: $body-font-size;
+  @include font-smoothing;
 }
 
 a {
-	color: #2C3E50;
-	text-decoration: none;
-	&:hover,
-	&:focus {
-		color: setcolor(gray);
-	}
-	&:focus {
-		outline: none;
-	}
+  color: #2C3E50;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: setcolor(gray);
+  }
+  &:focus {
+    outline: none;
+  }
 }
 
 
@@ -51,10 +51,10 @@ h3,
 h4,
 h5,
 h6 {
-	line-height: 1;
-	a {
-		color: #000;
-	}
+  line-height: 1;
+  a {
+    color: #000;
+  }
 }
 
 
@@ -65,19 +65,19 @@ h6 {
 p,
 dl,
 address {
-	@extend %type-medium;
+  @extend %type-medium;
 }
 
 p,
 li,
 dt,
 dd {
-	font-weight: normal;
-	font-style: normal;
+  font-weight: normal;
+  font-style: normal;
 }
 
 li {
-	line-height: 1;
+  line-height: 1;
 }
 
 // --------------------------------
@@ -85,5 +85,5 @@ li {
 // --------------------------------
 
 .wysiwyg {
-	@extend %wysiwyg;
+  @extend %wysiwyg;
 }

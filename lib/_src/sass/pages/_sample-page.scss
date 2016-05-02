@@ -7,65 +7,65 @@
 // --------------------------------
 
 .sample-header {
-	text-align: center;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 300;
-	font-size: rem(40px);
-	text-transform: uppercase;
-	padding: rem(30px);
-	margin-bottom: rem(50px);
-	color: #E74C3C;
-	h1 {
-		font-weight: inherit;
-	}
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: rem(40px);
+  text-transform: uppercase;
+  padding: rem(30px);
+  margin-bottom: rem(50px);
+  color: #E74C3C;
+  h1 {
+    font-weight: inherit;
+  }
 }
 
 .col-wrap {
-	@include cf;
-	width: 100%;
-	max-width: rem(700px);
-	margin: rem(0 auto);
-	.wysiwyg {
-		padding: rem(0 10px);
-	}
+  @include cf;
+  width: 100%;
+  max-width: rem(700px);
+  margin: rem(0 auto);
+  .wysiwyg {
+    padding: rem(0 10px);
+  }
 }
 
 .sample-sprites,
 .sample-symbols {
-	float: left;
-	width: calc(100% - 20px);
-	float: left;
-	max-width: 600px;
-	margin: rem(0 10px 40px);
-	padding: rem(0 40px 40px);
-	border: 1px solid rgba(setcolor(black), .2);
-	border-radius: rem(5px);
-	overflow: hidden;
-	@include mq(small) {
-		width: calc(50% - 20px);
-		margin: rem(0 10px 40px);
-	}
-	// heading
-	h2 {
-		display: inline-block;
-		width: calc(100% + 80px);
-		left: rem(-40px);
-		padding: rem(10px 40px);
-		background: setcolor(black);
-		color: #fff;
-		font-family: 'Open Sans', sans-serif;
-		font-weight: 700;
-		font-size: rem(16px);
-		margin-bottom: rem(40px);
-	}
-	// icons
-	i {
-		display: block;
-		margin-bottom: rem(30px);
-		&:last-of-type {
-			margin-bottom: 0;
-		}
-	}
+  float: left;
+  width: calc(100% - 20px);
+  float: left;
+  max-width: 600px;
+  margin: rem(0 10px 40px);
+  padding: rem(0 40px 40px);
+  border: 1px solid rgba(setcolor(black), .2);
+  border-radius: rem(5px);
+  overflow: hidden;
+  @include mq(small) {
+    width: calc(50% - 20px);
+    margin: rem(0 10px 40px);
+  }
+  // heading
+  h2 {
+    display: inline-block;
+    width: calc(100% + 80px);
+    left: rem(-40px);
+    padding: rem(10px 40px);
+    background: setcolor(black);
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: rem(16px);
+    margin-bottom: rem(40px);
+  }
+  // icons
+  i {
+    display: block;
+    margin-bottom: rem(30px);
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
 }
 
 // --------------------------------
@@ -73,20 +73,20 @@
 // --------------------------------
 
 .sample-sprites {
-	.icon-one {
-		&:before {
-			content: "";
-			@extend .sprite-sample;
-			@include sprite($sun);
-		}
-	}
-	.icon-two {
-		&:before {
-			content: "";
-			@extend .sprite-sample;
-			@include sprite($air);
-		}
-	}
+  .icon-one {
+    &:before {
+      content: "";
+      @extend .sprite-sample;
+      @include sprite($sun);
+    }
+  }
+  .icon-two {
+    &:before {
+      content: "";
+      @extend .sprite-sample;
+      @include sprite($air);
+    }
+  }
 }
 
 // --------------------------------
@@ -94,19 +94,19 @@
 // --------------------------------
 
 .sample-symbols {
-	.symbol-one {
-		font-size: rem(30px);
-		&:before {
-			@include symbols(book);
-		}
-	}
-	.symbol-two {
-		font-size: rem(30px);
-		&:before {
-			@include symbols(briefcase);
-			color: #3498DB;
-		}
-	}
+  .symbol-one {
+    font-size: rem(30px);
+    &:before {
+      @include symbols(book);
+    }
+  }
+  .symbol-two {
+    font-size: rem(30px);
+    &:before {
+      @include symbols(briefcase);
+      color: #3498DB;
+    }
+  }
 }
 
 
@@ -115,116 +115,116 @@
 // --------------------------------
 
 .grid-samples {
-	code {
-		display: block;
-	}
+  code {
+    display: block;
+  }
 
-	h2 {
-		@extend %hsize-large;
-		text-align: center;
-		margin-bottom: rem(20px);
-	}
-	h4 {
-		@extend %hsize-small;
-		text-align: center;
-		margin-bottom: rem(20px);
-	}
-	.row > code {
-		text-align: center;
-		padding: rem(20px);
-	}
-	.row {
-		@include container(1200px);
-		background: rgba(setcolor(black), .1);
-		padding: rem(0 20px);
-		margin-bottom: rem(50px);
-	}
-	div,
-	aside,
-	article {
-		background: rgba(setcolor(black), .4);
-		padding: rem(20px);
-		margin-bottom: rem(20px);
-		color: #fff;
-	}
+  h2 {
+    @extend %hsize-large;
+    text-align: center;
+    margin-bottom: rem(20px);
+  }
+  h4 {
+    @extend %hsize-small;
+    text-align: center;
+    margin-bottom: rem(20px);
+  }
+  .row > code {
+    text-align: center;
+    padding: rem(20px);
+  }
+  .row {
+    @include container(1200px);
+    background: rgba(setcolor(black), .1);
+    padding: rem(0 20px);
+    margin-bottom: rem(50px);
+  }
+  div,
+  aside,
+  article {
+    background: rgba(setcolor(black), .4);
+    padding: rem(20px);
+    margin-bottom: rem(20px);
+    color: #fff;
+  }
 }
 
 // Basic
 .grid-basic {
-	div {
-		@include span(5 of 10);
-		&:first-child {
-			@include span(5 of 10);
-		}
-		&:last-child {
-			@include span(5 of 10 last);
-		}
-	}
+  div {
+    @include span(5 of 10);
+    &:first-child {
+      @include span(5 of 10);
+    }
+    &:last-child {
+      @include span(5 of 10 last);
+    }
+  }
 }
 
 // Multiple
 .grid-multiple {
-	div {
-		float: left;
-	}
-	.item-1 {
-		@include span(1 of 12);
-	}
-	.item-2 {
-		@include span(11 of 12 last);
-	}
-	.item-3 {
-		@include span(2 of 12);
-	}
-	.item-4 {
-		@include span(10 of 12 last);
-	}
-	.item-5 {
-		@include span(3 of 12);
-	}
-	.item-6 {
-		@include span(9 of 12 last);
-	}
-	.item-7 {
-		@include span(4 of 12);
-	}
-	.item-8 {
-		@include span(8 of 12 last);
-	}
-	.item-9 {
-		@include span(5 of 12);
-	}
-	.item-10 {
-		@include span(7 of 12 last);
-	}
-	.item-11 {
-		@include span(6 of 12);
-	}
-	.item-12 {
-		@include span(6 of 12 last);
-	}
+  div {
+    float: left;
+  }
+  .item-1 {
+    @include span(1 of 12);
+  }
+  .item-2 {
+    @include span(11 of 12 last);
+  }
+  .item-3 {
+    @include span(2 of 12);
+  }
+  .item-4 {
+    @include span(10 of 12 last);
+  }
+  .item-5 {
+    @include span(3 of 12);
+  }
+  .item-6 {
+    @include span(9 of 12 last);
+  }
+  .item-7 {
+    @include span(4 of 12);
+  }
+  .item-8 {
+    @include span(8 of 12 last);
+  }
+  .item-9 {
+    @include span(5 of 12);
+  }
+  .item-10 {
+    @include span(7 of 12 last);
+  }
+  .item-11 {
+    @include span(6 of 12);
+  }
+  .item-12 {
+    @include span(6 of 12 last);
+  }
 }
 
 // Nested
 .grid-nested {
-	.item-1 {
-		@include span(3 of 9);
-	}
-	.item-2 {
-		@include span(6 of 9 last);
-		> code {
-			margin-bottom: rem(20px);
-			text-align: center;
-		}
-	}
-	aside,
-	article {
-		margin-bottom: 0;
-	}
-	aside {
-		@include span(4 of 8);
-	}
-	article {
-		@include span(4 of 8 last);
-	}
+  .item-1 {
+    @include span(3 of 9);
+  }
+  .item-2 {
+    @include span(6 of 9 last);
+    > code {
+      margin-bottom: rem(20px);
+      text-align: center;
+    }
+  }
+  aside,
+  article {
+    margin-bottom: 0;
+  }
+  aside {
+    @include span(4 of 8);
+  }
+  article {
+    @include span(4 of 8 last);
+  }
 }

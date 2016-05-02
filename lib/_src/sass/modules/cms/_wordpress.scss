@@ -14,34 +14,34 @@ $margin-center: rem(5px auto 0 auto);
 //---------------------------------
 
 .alignnone {
-	margin: 0;
+  margin: 0;
 }
 
 .aligncenter,
 div.aligncenter {
-	display: block;
-	margin: $margin-center;
+  display: block;
+  margin: $margin-center;
 }
 
 .alignright {
-	float: none;
-	@include mq(mini) {
-		float: right;
-		margin: $margin-right;
-	}
+  float: none;
+  @include mq(mini) {
+    float: right;
+    margin: $margin-right;
+  }
 }
 
 .alignleft {
-	float: none;
-	@include mq(mini) {
-		float: left;
-		margin: $margin-left;
-	}
+  float: none;
+  @include mq(mini) {
+    float: left;
+    margin: $margin-left;
+  }
 }
 
 .aligncenter {
-	display: block;
-	margin: $margin-center;
+  display: block;
+  margin: $margin-center;
 }
 
 
@@ -50,38 +50,38 @@ div.aligncenter {
 // --------------------------------
 
 a img {
-	&.alignleft,
-	&.alignright {
-		@include mq(mini) {
-			width: auto;
-			float: left;
-		}
-	}
+  &.alignleft,
+  &.alignright {
+    @include mq(mini) {
+      width: auto;
+      float: left;
+    }
+  }
 
-	&.alignleft {
-		@include mq(mini) {
-			margin: $margin-left;
-		}
-	}
+  &.alignleft {
+    @include mq(mini) {
+      margin: $margin-left;
+    }
+  }
 
-	&.alignright {
-		@include mq(mini) {
-			margin: $margin-right;
-		}
-	}
+  &.alignright {
+    @include mq(mini) {
+      margin: $margin-right;
+    }
+  }
 
-	&.aligncenter {
-		width: auto;
-		display: block;
-		margin-left: auto;
-		margin-right: auto
-	}
+  &.aligncenter {
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+  }
 
-	&.alignnone {
-		@include mq(mini) {
-			width: auto;
-		}
-	}
+  &.alignnone {
+    @include mq(mini) {
+      width: auto;
+    }
+  }
 }
 
 
@@ -90,66 +90,66 @@ a img {
 // --------------------------------
 
 .wp-caption {
-	width: 100% !important;
-	max-width: 100%;
-	padding: rem(0 0 10px);
-	text-align: left;
-	margin-bottom: rem(20px);
+  width: 100% !important;
+  max-width: 100%;
+  padding: rem(0 0 10px);
+  text-align: left;
+  margin-bottom: rem(20px);
 
-	a,
-	a:hover {
-		border-bottom: 0 !important;
-	}
+  a,
+  a:hover {
+    border-bottom: 0 !important;
+  }
 
-	img {
-		border: 0 none;
-		height: auto;
-		margin: rem(0 0 5px);
-		max-width: 100%;
-		padding: 0;
-		width: 100%;
-	}
+  img {
+    border: 0 none;
+    height: auto;
+    margin: rem(0 0 5px);
+    max-width: 100%;
+    padding: 0;
+    width: 100%;
+  }
 
-	&.alignnone {
-		@include mq(mini) {
-			margin: $margin-left;
-		}
-	}
+  &.alignnone {
+    @include mq(mini) {
+      margin: $margin-left;
+    }
+  }
 
-	&.alignleft {
-		@include mq(mini) {
-			margin: $margin-left;
-		}
-	}
+  &.alignleft {
+    @include mq(mini) {
+      margin: $margin-left;
+    }
+  }
 
-	&.alignright {
-		@include mq(mini) {
-			margin: $margin-right;
-		}
-	}
+  &.alignright {
+    @include mq(mini) {
+      margin: $margin-right;
+    }
+  }
 
-	&.alignleft,
-	&.alignright {
-		@include mq(mini) {
-			width: rem(250px) !important;
-		}
-		@include mq(medium) {
-			width: 100%;
-			max-width: rem(340px);
-		}
-	}
+  &.alignleft,
+  &.alignright {
+    @include mq(mini) {
+      width: rem(250px) !important;
+    }
+    @include mq(medium) {
+      width: 100%;
+      max-width: rem(340px);
+    }
+  }
 
-	.wp-caption-text {
-		@include setfont(default);
-		font-size: rem(12px);
-		color: #777;
-		line-height: rem(16px);
-		padding: rem(0 0 10px);
-		margin: 0;
-		border-bottom: rem(1px) solid rgba(192, 192, 193, 0.2);
-	}
+  .wp-caption-text {
+    @include setfont(default);
+    font-size: rem(12px);
+    color: #777;
+    line-height: rem(16px);
+    padding: rem(0 0 10px);
+    margin: 0;
+    border-bottom: rem(1px) solid rgba(192, 192, 193, 0.2);
+  }
 }
 
 .aligncenter.wp-caption {
-	width: 100% !important;
+  width: 100% !important;
 }

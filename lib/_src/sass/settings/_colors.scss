@@ -7,18 +7,18 @@
 // --------------------------------
 
 $colors: (
-	black: #2C3E50,
-	white: #fff,
-	gray: (
-		base: #999,
-		light: #ccc,
-		dark: #333
-	),
-	teal: (
-		base: #139397,
-		light: #33afb3,
-		dark: #264d4e
-	)
+  black: #2C3E50,
+  white: #fff,
+  gray: (
+    base: #999,
+    light: #ccc,
+    dark: #333
+  ),
+  teal: (
+    base: #139397,
+    light: #33afb3,
+    dark: #264d4e
+  )
 );
 
 
@@ -36,14 +36,14 @@ $colors: (
  */
 
 @function setcolor($color_name, $tone: base) {
-	@if map-has-key($colors, $color_name) {
-		$map_color_name: map-get($colors, $color_name);
-		@if (length($map_color_name) > 1) { /* This must be a map */
-			@return map-get($map_color_name, $tone);
-		} @else { /* It's just a single color */
-			@return $map_color_name;
-		}
-	} @else {
-		@warn "Couldn't find a color named `#{$color_name}`.";
-	}
+  @if map-has-key($colors, $color_name) {
+    $map_color_name: map-get($colors, $color_name);
+    @if (length($map_color_name) > 1) { /* This must be a map */
+      @return map-get($map_color_name, $tone);
+    } @else { /* It's just a single color */
+      @return $map_color_name;
+    }
+  } @else {
+    @warn "Couldn't find a color named `#{$color_name}`.";
+  }
 }
