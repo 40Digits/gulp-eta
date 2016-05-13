@@ -49,7 +49,7 @@
     // otherwise if it's not a number
     // we are going to check if the value matches our media query map in "settings/_options.scss"
     } @else if map-has-key($mq, $point) {
-      @media #{map-get($mq, $point)} {
+      @media #{inspect(map-get($mq, $point))} {
         @content;
       }
     } @else {
