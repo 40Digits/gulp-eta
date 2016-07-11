@@ -1,3 +1,4 @@
+##DEPRECATED: Gulp-eta has been deprecated and will no longer be supported
 # Eta
 
 Eta-2 Actis-class interceptor, sometimes referred to as the Jedi interceptor due to its popularity with Jedi pilots, was a Clone Wars-era Republic starfighter.
